@@ -1,7 +1,5 @@
 package exercises;
 
-import com.sun.security.jgss.InquireSecContextPermission;
-
 /**
  * Given two strings, write a method to decide if one is permutation of the other.
  * 
