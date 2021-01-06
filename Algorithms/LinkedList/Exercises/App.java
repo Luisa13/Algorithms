@@ -13,12 +13,20 @@ public class App {
 		
 		l.print();
 		
+		
 		//ex1 x = new ex1();
 		//l = x.removesDuplicated(l);
+		//l.print();
 		
-		ex2 x = new ex2();
-		int n = (int) x.KthElement(l, 4);
-		System.out.print(n);
+		//ex2 x = new ex2();
+		//int n = (int) x.KthElement(l, 4);
+		//System.out.print(n);
+		
+		//ex3 x = new ex3();
+		//LinkedList<Integer>.Node<Integer> n = x.deleteMiddleNode(l.next());
+		
+		
+		
 		
 
 		
