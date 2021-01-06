@@ -13,10 +13,12 @@ public class App {
 		
 		l.print();
 		
-		ex1 x = new ex1();
-		l = x.removesDuplicated(l);
+		//ex1 x = new ex1();
+		//l = x.removesDuplicated(l);
 		
-		l.print();
+		ex2 x = new ex2();
+		int n = (int) x.KthElement(l, 4);
+		System.out.print(n);
 		
 
 		

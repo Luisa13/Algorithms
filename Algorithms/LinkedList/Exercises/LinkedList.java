@@ -12,6 +12,7 @@ package Exercises;
 
 public class LinkedList<T> {
 	 Node<T> head;
+	 private int length;
 	
 	 /**
 	  * Defines a node of the linked list
@@ -19,14 +20,24 @@ public class LinkedList<T> {
 	 class Node<T> {
 		T value;
 		Node<T> next;
-		boolean repeated;
+		boolean visited;
 		
 		Node(T data){
 			this.value = data;
 			this.next = null;
-			this.repeated = false;
+			this.visited = false;
 		}
-	}
+	 }
+	 
+	 /**
+	  * Class constructor
+	  * 
+	  * */
+	 public LinkedList() {
+		 this.length = 0;
+		 this.head = null;
+	 }
+	
 	 
 	/**
 	 * Inserts a new node with T value to the linked list
@@ -50,6 +61,7 @@ public class LinkedList<T> {
 			}
 			copy.next = newNode;
 		}
+		this.length ++;
 		
 		return list;
 	}
@@ -80,6 +92,14 @@ public class LinkedList<T> {
 	}
 	
 	/**
+	 * Returns the number of elements in the list
+	 * @return lenght (int) Number of elements
+	 * */
+	public int length() {
+		return this.length;
+	}
+	
+	/**
 	 * Returns the value of the current node
 	 * @return value
 	 * */
@@ -92,20 +112,19 @@ public class LinkedList<T> {
 	}
 	
 	/**
-	 * Returns if an element is repeated
+	 * Returns if a node has been traversed
 	 * @return repeated
 	 * */
-	public boolean repeated() {
-		return this.head.repeated;
+	public boolean visited() {
+		return this.head.visited;
 	}
 	
 	/**
-	 * Set the value of repeated to True in case there is an element that 
-	 * is already in the list. False otherwise
+	 * Set the value of visited to True in case that node was already traversed. False otherwise
 	 * @param r 
 	 * */
-	public void repeated(boolean r) {
-		this.head.repeated = r;
+	public void visited(boolean r) {
+		this.head.visited = r;
 	}
 	
 	/**
