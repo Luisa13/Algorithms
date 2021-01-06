@@ -1,10 +1,21 @@
 package Exercises;
 
 import java.util.HashSet;
-
+/**
+ * Code to remove duplicates from an unsorted linked list
+ * 
+ * @author luisa
+ * 
+ * */
 public class ex1 {
 	
 
+	/**
+	 * Removes duplicated from an unsorted linked list
+	 * 
+	 * @param root 	Linked list to be traversed
+	 * @return root Resulting linked list
+	 * */
 	public <T> LinkedList<T> removesDuplicated(final LinkedList<T> root){
 		//Map to control the repeated elements 
 		HashSet<T> set = new HashSet<>();

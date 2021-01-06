@@ -18,7 +18,7 @@ public class ex2 {
 		LinkedList<T>.Node<T> current = root.head;
 		
 		// We can use the length method to know how many elements are in the linked list.
-		//Otherwise (and most likely) we will have to count them up apart O(n)
+		// Otherwise (and most likely) we will have to count them up apart O(n)
 		int n_elements = root.length();
 		
 		while(current != null) {
