@@ -25,6 +25,10 @@ public class App {
 		//ex3 x = new ex3();
 		//LinkedList<Integer>.Node<Integer> n = x.deleteMiddleNode(l.next());
 		
+		ex4 x = new ex4();
+		l = x.partition(l, 4);
+		l.print();
+		
 		
 		
 		
