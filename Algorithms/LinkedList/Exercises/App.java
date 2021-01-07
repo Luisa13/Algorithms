@@ -25,8 +25,21 @@ public class App {
 		//ex3 x = new ex3();
 		//LinkedList<Integer>.Node<Integer> n = x.deleteMiddleNode(l.next());
 		
-		ex4 x = new ex4();
-		l = x.partition(l, 4);
+		//ex4 x = new ex4();
+		//l = x.partition(l, 4);
+		//l.print();
+		
+		ex5 x = new ex5();
+		LinkedList<Integer> term1 = new LinkedList<Integer>();
+		term1.insert(7);
+		term1.insert(1);
+		term1.insert(6);
+		LinkedList<Integer> term2 = new LinkedList<Integer>();
+		term2.insert(5);
+		term2.insert(9);
+		term2.insert(2);
+		
+		l = x.sumList(term1, term2);
 		l.print();
 		
 		
