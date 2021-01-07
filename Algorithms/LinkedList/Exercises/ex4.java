@@ -1,5 +1,7 @@
 package Exercises;
 
+import Exercises.LinkedList.Node;
+
 /**
  * Write a code to partition a linked list around a value x, such that all nodes
  * less than x come before all nodes greater than or equal to x. If x is
@@ -29,16 +31,16 @@ public class ex4 {
 	 * @return Linked list as a result
 	 */
 	public LinkedList<Integer> partition(LinkedList<Integer> root, int x) {
-		LinkedList<Integer>.Node<Integer> head = root.head;
-		LinkedList<Integer>.Node<Integer> current = root.head;
-		LinkedList<Integer>.Node<Integer> prev = null;
+		Node<Integer> head = root.head;
+		Node<Integer> current = root.head;
+		Node<Integer> prev = null;
 
 		while (current != null) {
 			//The value that will be pointing to the head is not already in the head!
 			if (current.value < x && current != head) {
 
-				LinkedList<Integer>.Node<Integer> minorNode = current;
-				LinkedList<Integer>.Node<Integer> next = current.next;
+				Node<Integer> minorNode = current;
+				Node<Integer> next = current.next;
 
 				// Point to the head of the list
 				minorNode.next = head;

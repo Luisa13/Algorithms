@@ -17,7 +17,7 @@ public class LinkedList<T> {
 	 /**
 	  * Defines a node of the linked list
 	  * */
-	 class Node<T> {
+	 static class Node<T> {
 		T value;
 		Node<T> next;
 		boolean visited;

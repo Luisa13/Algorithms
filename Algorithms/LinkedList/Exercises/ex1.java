@@ -1,6 +1,7 @@
 package Exercises;
 
 import java.util.HashSet;
+import Exercises.LinkedList.Node;
 /**
  * Code to remove duplicates from an unsorted linked list
  * 
@@ -21,14 +22,14 @@ public class ex1 {
 		HashSet<T> set = new HashSet<>();
 		
 		// Deep copy of the head to traverse the list without modifying it
-		LinkedList<T>.Node<T> current = root.head;
-		LinkedList<T>.Node<T> prev = null;
+		Node<T> current = root.head;
+		Node<T> prev = null;
 		
 		while(current != null) {
 			T element = current.value;
 			// Skip the node if we aleady see that value
 			if(set.contains(element)) {
-				LinkedList<T>.Node<T> next = current.next;
+				Node<T> next = current.next;
 				prev.next = next;
 			}
 			else {
