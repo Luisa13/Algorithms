@@ -85,6 +85,9 @@ public class ex5 {
 			sum *= 10;
 			int digit = l1.current() + l2.current();
 			sum += digit;
+			
+			l1.head = l1.next();
+			l2.head = l2.next();
 		}
 		LinkedList<Integer> result = new LinkedList<Integer>();
 		
@@ -93,11 +96,12 @@ public class ex5 {
 			sum = sum / 10;
 			Node<Integer> node =new Node<Integer>(r);
 			if(result.head != null) {
-				result.head.next = node;
 				node.next = result.head;
+				result.head = node;
 			}
 			else
 				result.head = node;
+
 		}
 		return result;
 		

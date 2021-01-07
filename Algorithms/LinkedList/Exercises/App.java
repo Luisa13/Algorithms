@@ -31,13 +31,13 @@ public class App {
 		
 		ex5 x = new ex5();
 		LinkedList<Integer> term1 = new LinkedList<Integer>();
-		term1.insert(7);
-		term1.insert(1);
 		term1.insert(6);
+		term1.insert(1);
+		term1.insert(7);
 		LinkedList<Integer> term2 = new LinkedList<Integer>();
-		term2.insert(5);
-		term2.insert(9);
 		term2.insert(2);
+		term2.insert(9);
+		term2.insert(5);
 		
 		l = x.sumList(term1, term2);
 		l.print();
