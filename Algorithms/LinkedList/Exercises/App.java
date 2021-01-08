@@ -29,7 +29,7 @@ public class App {
 		//l = x.partition(l, 4);
 		//l.print();
 		
-		ex5 x = new ex5();
+		/*ex5 x = new ex5();
 		LinkedList<Integer> term1 = new LinkedList<Integer>();
 		term1.insert(6);
 		term1.insert(1);
@@ -40,7 +40,19 @@ public class App {
 		term2.insert(5);
 		
 		l = x.sumList(term1, term2);
-		l.print();
+		l.print();*/
+		
+		ex6 x = new ex6();
+		LinkedList<Character> pal = new LinkedList<Character>();
+		pal.insert('A');
+		pal.insert('B');
+		pal.insert('C');
+		pal.insert('B');
+		pal.insert('A');
+		if(x.isPalindrome(pal))
+			System.out.print("Is palindrome\n");
+		else
+			System.out.print("Is NOT a palindrome\n");
 		
 		
 		
