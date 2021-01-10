@@ -75,6 +75,21 @@ public class LinkedList<T> {
 		this.insert(this, data);
 	}
 	
+	
+	/**
+	 * Appends at the end of the list another one
+	 * @param extenal
+	 *  
+	 * */
+	public void append(LinkedList<T> extenal) {
+		Node<T> copy = this.head;
+		while(copy != null) {
+			copy = copy.next;
+		}
+		copy.next = extenal.head;
+		
+	}
+	
 	/**
 	 * Returns the next node
 	 * @return next
