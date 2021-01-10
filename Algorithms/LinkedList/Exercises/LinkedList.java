@@ -11,18 +11,18 @@ package Exercises;
  * */
 
 public class LinkedList<T> {
-	 Node<T> head;
+	 public Node<T> head;
 	 private int length;
 	
 	 /**
 	  * Defines a node of the linked list
 	  * */
-	 static class Node<T> {
-		T value;
-		Node<T> next;
+	 public static class Node<T> {
+		public T value;
+		public Node<T> next;
 		boolean visited;
 		
-		Node(T data){
+		public Node(T data){
 			this.value = data;
 			this.next = null;
 			this.visited = false;
@@ -81,13 +81,26 @@ public class LinkedList<T> {
 	 * @param extenal
 	 *  
 	 * */
-	public void append(LinkedList<T> extenal) {
-		Node<T> copy = this.head;
-		while(copy != null) {
+	@SuppressWarnings("null")
+	private LinkedList<T> append(LinkedList<T> list, LinkedList<T> external) {
+		if(list == null || external == null)
+			return null;
+		
+		Node<T> copy = list.head;
+		while(copy.next != null) {
 			copy = copy.next;
 		}
-		copy.next = extenal.head;
-		
+		copy.next = external.head;
+		return list;
+	}
+	
+	/**
+	 * Appends at the end of the list another one
+	 * @param list
+	 *  
+	 * */
+	public void append(LinkedList<T> list) {
+		this.append(this, list);
 	}
 	
 	/**

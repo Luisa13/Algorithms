@@ -1,5 +1,9 @@
 package Exercises;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import Exercises.LinkedList.Node;
+
 public class App {
 
 	public static void main(String[] args) {
@@ -42,7 +46,7 @@ public class App {
 		l = x.sumList(term1, term2);
 		l.print();*/
 		
-		ex6 x = new ex6();
+		/*ex6 x = new ex6();
 		LinkedList<Character> pal = new LinkedList<Character>();
 		pal.insert('A');
 		pal.insert('B');
@@ -52,7 +56,30 @@ public class App {
 		if(x.isPalindrome(pal))
 			System.out.print("Is palindrome\n");
 		else
-			System.out.print("Is NOT a palindrome\n");
+			System.out.print("Is NOT a palindrome\n");*/
+		
+		
+		ex7 exercise = new ex7();
+		LinkedList<Integer> l1 = new LinkedList<Integer>();
+		LinkedList<Integer> l2 = new LinkedList<>();
+		LinkedList<Integer> common = new LinkedList<>();
+		common.insert(3);
+		common.insert(9);
+		common.insert(2);
+		
+		l1.insert(7);
+		l1.insert(1);
+		l1.insert(0);
+		l1.append(common);
+		
+		l2.insert(5);
+		l2.insert(9);
+		l2.insert(2);
+		l2.append(common);
+		
+		Node<Integer> result = exercise.intersection(l1, l2);
+		
+
 		
 		
 		
