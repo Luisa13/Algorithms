@@ -2,6 +2,10 @@ package Exercises;
 
 import Exercises.LinkedList.Node;
 
+/**
+ * Given a circular linked list, implement an algorithm that returns the node at the beginning of the loop.
+ * @author luisa
+ * */
 public class ex8 {
 	
 	/**
