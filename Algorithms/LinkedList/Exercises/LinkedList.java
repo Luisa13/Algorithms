@@ -77,6 +77,42 @@ public class LinkedList<T> {
 	
 	
 	/**
+	 * Inserts a new node in the linked list
+	 * 
+	 * @param list List to append the new node
+	 * @param node New node to insert
+	 * */
+	private LinkedList<T> insert(LinkedList<T> list, Node<T> node) {
+		
+		if (list.head == null) 
+			list.head= node;
+		
+		else {
+			Node copy = list.head;
+			while(copy.next != null) {
+				copy = copy.next;
+			}
+			copy.next = node;
+		}
+		this.length ++;
+		
+		return list;
+	}
+	
+	/**
+	 * Inserts a new node in the linked list
+	 * 
+	 * @param node New node to insert
+	 * */
+	public void insert(Node<T> node) {
+		if(node.value == null)
+			return;
+		
+		this.insert(this, node);
+	}
+	
+	
+	/**
 	 * Appends at the end of the list another one
 	 * @param extenal
 	 *  
