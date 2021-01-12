@@ -1,5 +1,15 @@
 package Stack;
 
+/**
+ * Basic representation of a Stack with the purpose to help in the implementation of 
+ * this set of exercises. Though some of them might have its own implementation of the
+ *  Stack to meet the restrictions
+ * 
+ * @author luisa
+ * @param <T>
+ * 
+ * */
+
 public class Stack<T> {
 
 	Node<T> top;
