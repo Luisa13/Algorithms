@@ -1,7 +1,9 @@
-package linkedlist.exercises;
+package LinkedList;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import linkedlist.exercises.LinkedList;
+import linkedlist.exercises.ex8;
 import linkedlist.exercises.LinkedList.Node;
 
 public class App {
