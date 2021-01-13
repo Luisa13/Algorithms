@@ -1,4 +1,4 @@
-package exercises;
+package arrays.exercises;
 
 /**
  * Write a method to replace all spaces in a string with '%20'. You may assume 

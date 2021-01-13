@@ -1,15 +1,15 @@
-package Test;
+package linkedlist.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import Exercises.LinkedList;
-import Exercises.LinkedList.Node;
+import linkedlist.exercises.LinkedList;
+import linkedlist.exercises.LinkedList.Node;
 
 class ex8 {
 	
-	static final Exercises.ex8 exercise = new Exercises.ex8();
+	static final linkedlist.exercises.ex8 exercise = new linkedlist.exercises.ex8();
 
 	@Test
 	void thereIsALoop() {

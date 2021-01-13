@@ -1,6 +1,6 @@
-package Exercises;
+package linkedlist.exercises;
 
-import Exercises.LinkedList.Node;
+import linkedlist.exercises.LinkedList.Node;
 
 /**
  * Checks if a linked list is a palindrome

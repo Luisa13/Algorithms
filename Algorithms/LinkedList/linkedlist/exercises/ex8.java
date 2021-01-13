@@ -1,6 +1,6 @@
-package Exercises;
+package linkedlist.exercises;
 
-import Exercises.LinkedList.Node;
+import linkedlist.exercises.LinkedList.Node;
 
 /**
  * Given a circular linked list, implement an algorithm that returns the node at the beginning of the loop.

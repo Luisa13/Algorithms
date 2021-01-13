@@ -1,6 +1,6 @@
-package Exercises;
+package linkedlist.exercises;
 
-import Exercises.LinkedList.Node;
+import linkedlist.exercises.LinkedList.Node;
 
 /**
  * given two linked lists, determine if the two lists intersect and return the

@@ -1,6 +1,6 @@
-package Exercises;
+package linkedlist.exercises;
 
-import Exercises.LinkedList.Node;
+import linkedlist.exercises.LinkedList.Node;
 
 /**
  * Given two numbers represented by a linked list, where each node contains a single digit. 

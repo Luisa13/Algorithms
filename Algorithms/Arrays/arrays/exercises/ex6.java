@@ -1,4 +1,4 @@
-package exercises;
+package arrays.exercises;
 
 public class ex6 {
 	

@@ -1,6 +1,6 @@
-package Exercises;
+package linkedlist.exercises;
 
-import Exercises.LinkedList.Node;
+import linkedlist.exercises.LinkedList.Node;
 
 /**
  * Write a code to partition a linked list around a value x, such that all nodes

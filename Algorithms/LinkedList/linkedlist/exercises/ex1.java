@@ -1,7 +1,8 @@
-package Exercises;
+package linkedlist.exercises;
 
 import java.util.HashSet;
-import Exercises.LinkedList.Node;
+
+import linkedlist.exercises.LinkedList.Node;
 /**
  * Code to remove duplicates from an unsorted linked list
  * 

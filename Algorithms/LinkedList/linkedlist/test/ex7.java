@@ -1,14 +1,15 @@
-package Test;
+package linkedlist.test;
 
 import static org.junit.jupiter.api.Assertions.*;
-import Exercises.LinkedList;
-import Exercises.LinkedList.Node;
 
 import org.junit.jupiter.api.Test;
 
+import linkedlist.exercises.LinkedList;
+import linkedlist.exercises.LinkedList.Node;
+
 class ex7 {
 	
-	Exercises.ex7 exercise = new Exercises.ex7();
+	linkedlist.exercises.ex7 exercise = new linkedlist.exercises.ex7();
 	
 	@Test
 	void comparingWithIntesectionDifferentSizes() {
