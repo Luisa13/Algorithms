@@ -18,7 +18,7 @@ public class ex1 {
 		// Availabe capacity for each stack
 		private int size = 0;
 		// Array with the top index positions of each stack.
-		private int top[];
+		private int top[] = {-1, -1, -1};
 		// Array that contains the three stacks
 		private T vector[];
 
@@ -26,7 +26,6 @@ public class ex1 {
 		 * Class Constructor
 		 * */
 		public ThreeStacks() {
-			this.top = new int[K];
 			this.vector = null;
 		}
 		
@@ -39,8 +38,7 @@ public class ex1 {
 		@SuppressWarnings("unchecked")
 		public ThreeStacks(Class<T> clazz, int size) {
 			this.size = size;
-			this.top = new int [K];
-			this.vector  = (T[]) Array.newInstance(clazz, size);
+			this.vector  = (T[]) Array.newInstance(clazz, size*K);
 		}
 		
 		/**
@@ -50,10 +48,24 @@ public class ex1 {
 		 * */
 		boolean isFull(int kStack) {
 			int index = top[kStack];
+			if(index < 0 )
+				return false;
+			
 			if(index+1 == this.size*kStack)
 				return true;
 			else
 				return false;
+		}
+		
+		/**
+		 * Given the number of the stack, returns true if it's empty. False otherwise.
+		 * 
+		 * @param kStack
+		 * */
+		boolean isEmpty(int kStack) {
+			if(this.top[kStack] < 0)
+				return true;
+			return false;
 		}
 		
 		/**
@@ -62,12 +74,15 @@ public class ex1 {
 		 * @param element 	T object to push into the stack
 		 * @param nStack	Index of the stack
 		 * */
-		public void push(T element, int nStack) {
+		public void push(int nStack, T element) {
 			if(this.isFull(nStack)) {
 				// error
 				return;
 			}
 			int index = top[nStack];
+			if(this.isEmpty(nStack))
+				index = (this.size * nStack) - 1;
+			
 			this.vector[index+1] = element;
 			this.top[nStack] = index +1; 
 		}
@@ -79,7 +94,7 @@ public class ex1 {
 		 * */
 		public T top(int nStack) {
 			int index = this.top[nStack];
-			if(top[index] < 0) {
+			if(index < 0) {
 				//error
 				return null;
 			}
@@ -96,11 +111,17 @@ public class ex1 {
 		 * */
 		public void print() {
 			for(int i = 0; i< this.size*K; i++ ) {
-				System.out.print(this.vector[i] + "->");
-				if((i+1)%this.size == 0 || this.vector[i] == null)
+				if(this.vector[i] != null) {
+					System.out.print(this.vector[i] + "->");
+					if((i+1)%this.size == 0)
+						System.out.print("\n");
+				}
+				else
 					System.out.print("\n");
 			}
 		}
+		
+		
 		
 	}
 }
