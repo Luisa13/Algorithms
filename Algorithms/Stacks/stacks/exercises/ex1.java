@@ -1,4 +1,4 @@
-package Exercises;
+package stacks.exercises;
 
 import java.lang.reflect.Array;
 
@@ -13,7 +13,7 @@ public class ex1 {
 	 * Manage three stacks independently as one.
 	 * @author luisa
 	 * */
-	class ThreeStacks<T> {
+	public static class ThreeStacks<T> {
 		private static final int K = 3;
 		// Availabe capacity for each stack
 		private int size = 0;
@@ -33,7 +33,7 @@ public class ex1 {
 		/**
 		 * Class Constructor
 		 * 
-		 * @param clazz Class tipe
+		 * @param clazz Class type
 		 * @param size Capacity of the stack
 		 * */
 		@SuppressWarnings("unchecked")
@@ -49,8 +49,8 @@ public class ex1 {
 		 * @param kStack Index of the stack to check
 		 * */
 		boolean isFull(int kStack) {
-			int cap = (kStack+1)*this.size;
-			if(cap == this.top[kStack]+1)
+			int index = top[kStack];
+			if(index+1 == this.size*kStack)
 				return true;
 			else
 				return false;
@@ -79,11 +79,27 @@ public class ex1 {
 		 * */
 		public T top(int nStack) {
 			int index = this.top[nStack];
+			if(top[index] < 0) {
+				//error
+				return null;
+			}
+			
 			T element = this.vector[index];
 			this.vector[index] = null;
 			this.top[nStack] = index -1;
 			
 			return element;
+		}
+		
+		/**
+		 * Print the three of the stacks.
+		 * */
+		public void print() {
+			for(int i = 0; i< this.size*K; i++ ) {
+				System.out.print(this.vector[i] + "->");
+				if((i+1)%this.size == 0 || this.vector[i] == null)
+					System.out.print("\n");
+			}
 		}
 		
 	}

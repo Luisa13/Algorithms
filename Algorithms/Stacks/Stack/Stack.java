@@ -13,6 +13,7 @@ package Stack;
 public class Stack<T> {
 
 	Node<T> top;
+	private int size;
 	
 	static class Node<T>{
 		T value;
@@ -25,11 +26,13 @@ public class Stack<T> {
 	
 	public Stack() {
 		this.top = null;
+		this.size = 0;
 	}
 	
 	public Stack(T val) {
 		Node<T> firstNode = new Node<T>(val);
 		this.top = firstNode;
+		this.size = 1;
 	}
 	
 	/**
@@ -41,6 +44,7 @@ public class Stack<T> {
 		Node<T> newNode = new Node<T>(value);
 		newNode.prev = this.top;
 		top = newNode;
+		this.size ++;
 	}
 	
 	/**
@@ -51,6 +55,7 @@ public class Stack<T> {
 	public Node<T> top(){
 		Node<T> result = this.top;
 		this.top = this.top.prev;
+		this.size --;
 		return result;
 	}
 	
@@ -60,5 +65,19 @@ public class Stack<T> {
 	 * */
 	public T peek() {
 		return this.top.value;
+	}
+	
+	/**
+	 * Print the stack in forward order
+	 * */
+	public void print() {
+		StringBuilder sb = new StringBuilder();
+		for(int i =0; i< this.size; i++) {
+			sb.append(" >- " + this.top.value);
+			this.top = this.top.prev;
+		}
+		sb = sb.reverse();
+		
+		System.out.print(sb);
 	}
 }
