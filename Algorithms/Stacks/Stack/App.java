@@ -1,6 +1,6 @@
 package Stack;
 
-import stacks.exercises.ex1.ThreeStacks;
+import stacks.exercises.ex2.StackMin;
 
 public class App {
 
@@ -12,22 +12,16 @@ public class App {
 		stack.push(9);
 		stack.print();*/
 		
-		stacks.exercises.ex1.ThreeStacks<Integer> ints = new ThreeStacks<Integer>(Integer.class, 10);
+		stacks.exercises.ex2.StackMin ints = new StackMin(3);
 		
-		ints.push(0, 8);
-		ints.push(0, 3);
-		ints.push(0, 6);
-		ints.push(0, 1);
-		
-		ints.push(1, 7);
-		ints.push(1, 5);
-		ints.push(1, 4);
-		ints.push(1, 3);
-		
-		ints.push(2, 6);
-		ints.push(2, 0);
-		
+		ints.push(2);
+		ints.push(8);
+		ints.push(6);
+		ints.push(1);
+	
+		//ints.top();
 		ints.print();
+		ints.printMins();
 		
 	}
 
