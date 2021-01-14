@@ -1,6 +1,7 @@
 package Stack;
 
 import stacks.exercises.ex2.StackMin;
+import stacks.exercises.ex2.StackMin;
 
 public class App {
 
@@ -19,7 +20,10 @@ public class App {
 		ints.push(6);
 		ints.push(1);
 	
-		//ints.top();
+		ints.top();
+		ints.print();
+		ints.printMins();
+		ints.top();
 		ints.print();
 		ints.printMins();
 		
