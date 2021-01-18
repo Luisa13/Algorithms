@@ -1,13 +1,16 @@
 package stacks.exercises;
 
 /**
+ * Design a stack which, in addition to push and pop, has a function min which returns the minimum element. 
+ * They should operate in O(1)
  * 
+ * @author luisa
  * */
 
 public class ex2 {
 
 	/**
-	 * 
+	 * Implements a stack structure that manage to store the minimum element.
 	 * */
 	public static class StackMin {
 		// Points to the top of the stack
@@ -83,7 +86,6 @@ public class ex2 {
 					current = current.prev;
 					posCount++;
 				}
-				// posCount++;
 				Node prev = current.prev;
 				current.prev = newNode2;
 				newNode2.prev = prev;
@@ -158,6 +160,10 @@ public class ex2 {
 			this.print(this.min);
 		}
 
+		/**
+		 * Print a stack.
+		 * @param current First node in the stack
+		 * */
 		private void print(Node current) {
 			StringBuilder sb = new StringBuilder();
 			for (int i = 0; i < this.size; i++) {
