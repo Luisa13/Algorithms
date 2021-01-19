@@ -14,7 +14,7 @@ class ex3 {
 	Stack<Integer> fillStack(){
 		Stack<Integer> stack = new Stack<Integer>();
 		stack.push(3);
-		stack.push(6)
+		stack.push(6);
 		
 		return stack;	
 	}
