@@ -4,7 +4,13 @@ package stacks.exercises;
  * Given a situation where a stack might get topple, an ideal case would be start a new one when the previous 
  * one exceeds some threshold. Implement a class that mimics it. This class should be composed of several 
  * stacks and should create a new stack once the previous exceeds the capacity; pop and push should behave 
- * identicall to a single stack
+ * identically to a single stack.
+ * 
+ * The solution to this exercise might be tackled by using a inner stack of stacks (the one designed in this 
+ * folder, for example) which would make the operations easier to handle. Nevertheless, I decided to implement 
+ * it by using two different designs of Node classes, increasing the difficulty, just in case the use of another 
+ * whole structure is not allowed (Again, should not be any problem because the Stack class is designed by myself
+ * using these Node class, but...you know).
  * 
  * @author luisa
  * */
@@ -12,7 +18,8 @@ package stacks.exercises;
 public class ex3 {
 
 	/**
-	 * 
+	 * Simulates a stack that create a new stack when the previous one topple.
+	 * @param T
 	 * */
 	public static class SetOfStacks <T>{
 		private int size, capacity;
@@ -20,7 +27,8 @@ public class ex3 {
 		private NodeStack<T> stacks;
 		
 		/**
-		 * 
+		 * Modulate a singly connected node
+		 * @param T
 		 * */
 		static class Node<T>{
 			T value;
@@ -32,13 +40,16 @@ public class ex3 {
 			}
 		}
 		/**
-		 * 
+		 * Modulate a node where each instance point both, the previous 
+		 * element and the head of a stack.
+		 * @param T
 		 * */
 		static class NodeStack<T>{
 			Node<T> head;
 			NodeStack<T> prev;
 			public NodeStack() {
-				// TODO Auto-generated constructor stub
+				this.head = null;
+				this.prev = null;
 			}
 		}
 		
@@ -121,6 +132,20 @@ public class ex3 {
 				return true;
 			else 
 				return false;
+		}
+		
+		/**
+		 * Returns the value of the last element on the stack
+		 * */
+		public T peek() {
+			if(!isEmpty())
+				return this.top.value;
+			else 
+				return null;
+		}
+		
+		public int size() {
+			return this.size;
 		}
 	}
 }
