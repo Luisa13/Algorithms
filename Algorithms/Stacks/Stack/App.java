@@ -1,5 +1,8 @@
 package Stack;
-import stacks.exercises.ex5;
+import java.util.Date;
+
+import stacks.exercises.ex6.Shetter;
+import stacks.exercises.ex6.Shetter.Cat;
 
 public class App {
 
@@ -11,17 +14,19 @@ public class App {
 		stack.push(9);
 		stack.print();*/
 		
-		ex5 exercise = new ex5();
-		Stack<Integer> myStack = new Stack<Integer>();
-		myStack.push(9);
-		myStack.push(8);
-		myStack.push(7);
-		myStack.push(3);
-		myStack.push(2);
-		myStack.push(1);
+		Shetter shetter = new Shetter();
+		Date date = new Date(20050516);
+		Cat cat = new Cat(date, "pepe");
+		shetter.enqueueCat(date, "pepe");
+		date = new Date(20070516);
+		cat = new Cat(date, "paco");
+		shetter.enqueueCat(date, "paco");
 		
-		myStack = exercise.sortStack(myStack);
-		myStack.print();
+		date = new Date(20060315);
+		shetter.enqueueDog(date, "Marcelo");
+		
+		Cat c = shetter.dequeueCat();
+		System.out.print(c.name());
 		
 		
 	}
