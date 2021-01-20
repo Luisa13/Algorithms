@@ -1,7 +1,5 @@
 package Stack;
-
-import stacks.exercises.ex2.StackMin;
-import stacks.exercises.ex2.StackMin;
+import stacks.exercises.ex5;
 
 public class App {
 
@@ -13,19 +11,18 @@ public class App {
 		stack.push(9);
 		stack.print();*/
 		
-		stacks.exercises.ex2.StackMin ints = new StackMin(3);
+		ex5 exercise = new ex5();
+		Stack<Integer> myStack = new Stack<Integer>();
+		myStack.push(9);
+		myStack.push(8);
+		myStack.push(7);
+		myStack.push(3);
+		myStack.push(2);
+		myStack.push(1);
 		
-		ints.push(2);
-		ints.push(8);
-		ints.push(6);
-		ints.push(1);
-	
-		ints.top();
-		ints.print();
-		ints.printMins();
-		ints.top();
-		ints.print();
-		ints.printMins();
+		myStack = exercise.sortStack(myStack);
+		myStack.print();
+		
 		
 	}
 

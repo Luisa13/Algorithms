@@ -12,12 +12,13 @@ package Stack;
 
 public class Stack<T> {
 
-	Node<T> top;
+	protected Node<T> top;
 	private int size;
 	
-	static class Node<T>{
-		T value;
-		Node<T> prev;
+	public static class Node<T>{
+		public T value;
+		public Node<T> prev;
+		
 		public Node(T val) {
 			this.value = val;
 			this.prev = null;
@@ -59,6 +60,7 @@ public class Stack<T> {
 		return result;
 	}
 	
+	
 	/**
 	 * Returns the value of the element at the top of the stack without 
 	 * removing from it.
@@ -68,16 +70,29 @@ public class Stack<T> {
 	}
 	
 	/**
+	 * Returns true if the stack has no elements left. False otherwise
+	 * 
+	 * */
+	public boolean isEmpty() {
+		if(this.size == 0)
+			return true;
+		else
+			return false;
+	}
+	
+	/**
 	 * Print the stack in forward order
 	 * */
 	public void print() {
+		Node<T> copy = this.top;
 		StringBuilder sb = new StringBuilder();
 		for(int i =0; i< this.size; i++) {
-			sb.append(" >- " + this.top.value);
-			this.top = this.top.prev;
+			sb.append(" >- " + copy.value);
+			copy = copy.prev;
 		}
 		sb = sb.reverse();
 		
 		System.out.print(sb);
+		System.out.println();
 	}
 }
