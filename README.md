@@ -3,10 +3,11 @@ Repository for algorithm and data structure practice (most of them in Java) coll
 
 Topic | Description | Link to my solution
 --------------- | --------------- | ---------------
-Arrays                | Arrays and Strings practice                 |[arrays](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Arrays/exercises)
-Linked List           | Problems based on linked list structure     |[linkedlist](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/LinkedList/Exercises)
+Arrays                | Arrays and Strings practice                 |[arrays](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Arrays)
+Linked List           | Problems based on linked list structure     |[linkedlist](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/LinkedList)
 Stacks and Queues     | Stacks and queues based solutions             |[Stacks](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Stacks)
 Trees and Graphs      | Exercise to cover trees and graphs structures |[]()
+Hash                  |              |[]()
 Bit Manipulation      |              |[]()
 Logic                 |              |[]()
 OO Design             |              |[]()
