@@ -1,7 +1,7 @@
 package stacks.exercises;
 
-import Stack.Stack;
-import Stack.Stack.Node;
+import stack.Stack;
+import stack.Stack.Node;
 import stacks.exercises.ex4.MyQueue;
 
 public class ex5 {

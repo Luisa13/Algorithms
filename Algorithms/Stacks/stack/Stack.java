@@ -1,4 +1,4 @@
-package Stack;
+package stack;
 
 /**
  * Basic representation of a Stack with the purpose to help in the implementation of 

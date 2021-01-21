@@ -2,8 +2,9 @@ package stacks.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+
+import stack.Stack;
 import stacks.exercises.ex1.ThreeStacks;
-import Stack.Stack;
 
 
 class ex1 {

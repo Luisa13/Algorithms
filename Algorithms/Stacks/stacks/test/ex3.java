@@ -6,7 +6,7 @@ import java.util.Random;
 
 import org.junit.jupiter.api.Test;
 
-import Stack.Stack;
+import stack.Stack;
 import stacks.exercises.ex3.SetOfStacks;
 
 class ex3 {

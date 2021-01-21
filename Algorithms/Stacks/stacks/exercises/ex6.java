@@ -2,7 +2,7 @@ package stacks.exercises;
 
 import java.util.Date;
 
-import Stack.Stack;
+import stack.Stack;
 import stacks.exercises.ex4.MyQueue;
 
 public class ex6 {

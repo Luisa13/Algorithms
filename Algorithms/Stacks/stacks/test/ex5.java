@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import Stack.Stack;
+import stack.Stack;
 
 class ex5 {
 

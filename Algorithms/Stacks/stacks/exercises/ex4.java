@@ -1,6 +1,6 @@
 package stacks.exercises;
 
-import Stack.Stack;
+import stack.Stack;
 
 /**
  * Implement a queue using twq stacks

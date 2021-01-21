@@ -1,4 +1,4 @@
-package Stack;
+package stack;
 import java.util.Date;
 
 import stacks.exercises.ex6.Shetter;
