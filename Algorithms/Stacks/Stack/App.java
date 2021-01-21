@@ -14,19 +14,7 @@ public class App {
 		stack.push(9);
 		stack.print();*/
 		
-		Shetter shetter = new Shetter();
-		Date date = new Date(20050516);
-		Cat cat = new Cat(date, "pepe");
-		shetter.enqueueCat(date, "pepe");
-		date = new Date(20070516);
-		cat = new Cat(date, "paco");
-		shetter.enqueueCat(date, "paco");
 		
-		date = new Date(20060315);
-		shetter.enqueueDog(date, "Marcelo");
-		
-		Cat c = shetter.dequeueCat();
-		System.out.print(c.name());
 		
 		
 	}

@@ -57,5 +57,14 @@ public class ex4 {
 		public T peek() {
 			return this.first;
 		}
+		
+		/**
+		 * Return the number of elements in total in que queue
+		 * 
+		 * @return size of the queue
+		 * */
+		public int size() {
+			return this.out.size() + this.in.size();
+		}
 	}
 }

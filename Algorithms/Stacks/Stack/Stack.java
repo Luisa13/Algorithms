@@ -81,6 +81,15 @@ public class Stack<T> {
 	}
 	
 	/**
+	 * Gets the number of elements in the stack
+	 * 
+	 * @return size of the stack
+	 * */
+	public int size() {
+		return this.size;
+	}
+	
+	/**
 	 * Print the stack in forward order
 	 * */
 	public void print() {
