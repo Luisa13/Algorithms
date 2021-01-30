@@ -3,14 +3,17 @@ package tree;
 import java.sql.PreparedStatement;
 
 /**
- * Represents a binary tree
+ * Represents a binary tree including the basic ways of traversing it (inorder, preorder and postorder)
  * 
+ * @param T
  * @author luisa
  */
 public class BinaryTree<T> {
 
 	/**
 	 * Node for a binary tree
+	 * 
+	 * @param T
 	 */
 	public static class Node<T> {
 		T value;
@@ -19,6 +22,8 @@ public class BinaryTree<T> {
 
 		/**
 		 * Node parameter constructor
+		 * 
+		 * @param T value of the node
 		 */
 		Node(T v) {
 			this.value = v;
@@ -110,7 +115,7 @@ public class BinaryTree<T> {
 	}
 
 	/**
-	 * Prints the node of the tree in preOrder visiting the root in the first place, 
+	 * Prints the nodes of the tree in preOrder visiting the root in the first place, 
 	 * then traversing the left subtree, and finally the right subtree
 	 * 
 	 * @param Node Current node to start to print
@@ -132,7 +137,8 @@ public class BinaryTree<T> {
 	}
 
 	/**
-	 * Prints the node of the tree in inOrder
+	 * Prints the nodes of the tree in inOrder traversing the left subtree in the first place, 
+	 * then the root and finally the right subtree.
 	 * 
 	 * @param Node Current node to start to print
 	 */
@@ -154,7 +160,8 @@ public class BinaryTree<T> {
 	}
 
 	/**
-	 * Prints the node of the tree in PostOrder
+	 * Prints the nodes of the tree in PostOrder, traversing in the first place the 
+	 * left subtree and the right subtree and at the end, visiting root
 	 * 
 	 * @param Node Current node to start to print
 	 */
