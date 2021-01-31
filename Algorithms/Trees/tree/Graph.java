@@ -7,7 +7,7 @@ import java.util.Map;
 
 /**
  * Represent an inteface of a directed graph. A Graph might be represented in many ways, 
- * for example with an adyacence matriz or adyacence list. In this case I will use the 
+ * for example with an adyacence matrix or adyacence list. In this case I will use the 
  * data structures provided by Java (Map in this case, in which each key is a vertex of 
  * the graph associated with a adyacence list), but it would be possible to use the data 
  * structures I implement in the other exercises.
@@ -44,7 +44,15 @@ public abstract class Graph<T> {
 			this.size ++;
 		
 		list.add(w);
-		this.adyMap.put(v, list);
-		
+		this.adyMap.put(v, list);	
+
+	}
+	
+	public int getSize() {
+		return this.size;
+	}
+	
+	public Map<T, List<T>> getAdyacenceList(){
+		return this.adyMap;
 	}
 }
