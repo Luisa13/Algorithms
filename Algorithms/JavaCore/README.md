@@ -4,8 +4,8 @@ The topics covered in this part are listed below but may serves as a reference [
 
 
 #### Data Types
-* -[ ] Primitives and wrapper classes, including, operators, parentheses, type promotion and casting
-* -[ ] String and StringBuilder classes
+* -[X] Primitives and wrapper classes, including, operators, parentheses, type promotion and casting
+* -[X] String and StringBuilder classes
 * -[ ] Local variable type inference, including as lambda parameters
 
 #### Java Object-Oriented Approach
