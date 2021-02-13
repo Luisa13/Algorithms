@@ -6,7 +6,7 @@ The topics covered in this part are listed below but may serves as a reference [
 #### Data Types
 * -[X] Primitives and wrapper classes, including, operators, parentheses, type promotion and casting
 * -[X] String and StringBuilder classes
-* -[ ] Local variable type inference, including as lambda parameters
+* -[X] Local variable type inference, including as lambda parameters
 
 #### Java Object-Oriented Approach
 * -[ ] Declare and instantiate Java objects including nested class objects explaining objects' lifecycles (including creation, dereferencing by reassignment, and garbage collection)
@@ -20,7 +20,7 @@ The topics covered in this part are listed below but may serves as a reference [
 
 #### Exception Handling
 * -[ ] Custom exceptions.
-* -[ ] Use a Java array and List, Set, Map and Deque collections, including convenience methods
+* -[ ] Handle exceptions using try/catch/finally clauses, try-with-resource, and multi-catch statements
 
 #### Arrays and Collections
 * -[ ] Use generics, including wildcards
