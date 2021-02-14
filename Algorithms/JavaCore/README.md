@@ -19,8 +19,8 @@ The topics covered in this part are listed below but may serves as a reference [
 * -[ ] Create and use enumerations
 
 #### Exception Handling
-* -[ ] Custom exceptions.
-* -[ ] Handle exceptions using try/catch/finally clauses, try-with-resource, and multi-catch statements
+* -[X] Custom exceptions.
+* -[X] Handle exceptions using try/catch/finally clauses, try-with-resource, and multi-catch statements
 
 #### Arrays and Collections
 * -[ ] Use generics, including wildcards
