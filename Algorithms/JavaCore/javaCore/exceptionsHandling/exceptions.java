@@ -11,6 +11,13 @@ public class exceptions {
 			System.out.print("Method2: Ey there! Im the SUPER class");
 		}
 		
+		public void validateAge(int age)throws MyPersonalException {
+			if(age < 18)
+				throw new MyPersonalException();
+			else
+				System.out.print("You're not underage!");
+		}
+		
 	}
 	
 	public static class subClass extends superClass{
@@ -21,6 +28,12 @@ public class exceptions {
 		/*public void method2() throws Exception {   // Compite time error
 			System.out.print("Method2: Ey there Im the SUBclass"); 
 		}*/
+	}
+	
+	public static class MyPersonalException extends Exception{
+		public MyPersonalException() {
+			super("oh-oh...");
+		}
 	}
 
 	/**
@@ -53,6 +66,19 @@ public class exceptions {
 			sc.method2();
 		}catch(ArithmeticException e){
 			System.out.print("This is an arithmetic exception \n");
+		}
+	}
+	
+	/**
+	 * Shows result when a custom exception occurs
+	 * 
+	 * */
+	public static void customException() {
+		superClass sc = new subClass();
+		try {
+			sc.validateAge(15);
+		} catch (Exception e) {
+			System.out.print("Exception occurred:\n " + e);
 		}
 	}
 }

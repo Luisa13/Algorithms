@@ -6,7 +6,8 @@ public class App {
 		// TODO Auto-generated method stub
 		
 		//exceptions.exceptionHandling();
-		exceptions.superClassDefinedException();
+		//exceptions.superClassDefinedException();
+		exceptions.customException();
 
 	}
 
