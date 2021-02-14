@@ -1,5 +1,12 @@
 package javaCore.exceptionsHandling;
 
+
+/**
+ * Pretty much explores the behavior of the regular exceptions and custom exceptions...
+ * 
+ * @author luisa
+ * 
+ * */
 public class exceptions {
 	
 	public static class superClass{
