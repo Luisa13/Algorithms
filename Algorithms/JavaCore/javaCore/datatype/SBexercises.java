@@ -27,7 +27,7 @@ public class SBexercises {
 	}
 	
 	/**
-	 * 
+	 * StringBuilder is thread safe
 	 * */
 	public static class TestThreadSafe implements Runnable{
 		private StringBuilder sb = new StringBuilder();
