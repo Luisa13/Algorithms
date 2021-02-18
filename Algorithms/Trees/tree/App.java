@@ -1,6 +1,8 @@
 package tree;
 
 import trees.exercises.ex1.DGraph;
+import trees.exercises.ex2;
+import trees.exercises.ex2.BST;
 
 public class App {
 
@@ -12,8 +14,8 @@ public class App {
 		bt.left().appendRight(9);
 		bt.right().appendRight(6);
 		
-		System.out.println(bt.getHeight());
-		bt.print();
+		//System.out.println(bt.getHeight());
+		//bt.print();
 		/*bt.inOrder(); 
 		bt.preOrder(); 
 		bt.postOrder();*/
@@ -25,6 +27,12 @@ public class App {
 		graph.addEdge(2, 0);
 		graph.addEdge(3, 4);
 		graph.thereIsARoute(0, 2);*/
+		
+		int elements[] = {1,2,3,4,5,6,7};
+		BST bst = ex2.minimalBST(elements);
+		bst.inOrder();
+		
+		
 	
 	}
 

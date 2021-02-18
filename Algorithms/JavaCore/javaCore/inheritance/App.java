@@ -10,7 +10,7 @@ public class App {
 		littleBeing.foo();*/
 		
 		Animal a = new Dog();
-		a.foo();
+		//a.foo();
 
 	}
 

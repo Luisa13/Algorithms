@@ -19,16 +19,16 @@ public class BinaryTree<T> {
 	 * @param T
 	 */
 	public static class Node<T> {
-		T value;
-		Node<T> left;
-		Node<T> right;
+		private T value;
+		private Node<T> left;
+		private Node<T> right;
 
 		/**
 		 * Node parameter constructor
 		 * 
 		 * @param T value of the node
 		 */
-		Node(T v) {
+		public Node(T v) {
 			this.value = v;
 			this.left = null;
 			this.right = null;
@@ -60,7 +60,7 @@ public class BinaryTree<T> {
 	}
 
 	private Node<T> root;
-	private int size;
+	//private int size;
 	private int height;
 
 	/**
@@ -68,7 +68,7 @@ public class BinaryTree<T> {
 	 */
 	public BinaryTree() {
 		this.root = null;
-		this.size = 0;
+		//this.size = 0;
 		this.height = 0;
 	}
 
