@@ -6,6 +6,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 
+/**
+ * Given a directed graph, design an algorithm to find out whether there is a 
+ * route between two nodes.
+ * 
+ * @author luisa
+ * 
+ * */
 public class ex1 {
 
 	public static class DGraph<T> extends Graph{
