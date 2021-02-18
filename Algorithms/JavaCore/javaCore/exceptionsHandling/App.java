@@ -8,7 +8,7 @@ public class App {
 		exceptions.exceptionHandling();
 		System.out.print("Java Exception handling with method overriding:\n");
 		exceptions.superClassDefinedException();
-		System.out.print("Just a Custom exception:\n")
+		System.out.print("Just a Custom exception:\n");
 		exceptions.customException();
 
 	}

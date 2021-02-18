@@ -12,7 +12,7 @@ public class Animal {
 		return this.weight;
 	}
 	
-	public void foo() {
+	private void foo() {
 		System.out.print("Im an Animal!!\n");
 	}
 }
