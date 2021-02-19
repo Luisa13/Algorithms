@@ -40,8 +40,7 @@ class ex3 {
 	
 		BSTLevel bstlevel = new BSTLevel(bst);
 		List<List<Integer>> l = trees.exercises.ex3.depthsList(bstlevel);
-		System.out.print(l);
-		System.out.print(levels);
+
 		assertTrue(l.equals(levels));
 		
 	}
