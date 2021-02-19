@@ -1,5 +1,7 @@
 package trees.exercises;
 
+import java.util.ArrayList;
+
 import tree.BinaryTree;
 
 /**
@@ -78,6 +80,23 @@ public class ex2 {
 			this.insert(this.root, element);
 		}
 		
+		private ArrayList<Integer> pInOrder(Node<Integer> node, ArrayList<Integer>list) {
+			if (node == null)
+				return list;
+			
+			list = pInOrder(node.left, list);
+			list.add(node.value);
+			list = pInOrder(node.right, list);
+			
+			return list;
+		}
+		
+		public Integer[] intoArray() {
+			ArrayList<Integer> l = this.pInOrder(this.root, new ArrayList<Integer>());
+			Integer[] array = l.toArray(new Integer[l.size()]);
+			return array;
+		}
+		
 	}
 	
 	/**
@@ -104,6 +123,8 @@ public class ex2 {
 		
 		return bst;
 	}
+	
+	
 		
 
 }

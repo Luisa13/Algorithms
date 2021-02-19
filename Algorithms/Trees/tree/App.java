@@ -1,5 +1,8 @@
 package tree;
 
+import java.util.ArrayList;
+
+
 import trees.exercises.ex1.DGraph;
 import trees.exercises.ex2;
 import trees.exercises.ex2.BST;
@@ -30,8 +33,7 @@ public class App {
 		
 		int elements[] = {1,2,3,4,5,6,7};
 		BST bst = ex2.minimalBST(elements);
-		bst.inOrder();
-		
+	
 		
 	
 	}
