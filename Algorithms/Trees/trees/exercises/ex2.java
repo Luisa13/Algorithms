@@ -41,6 +41,10 @@ public class ex2 {
 			//this.root = new NodeBST(rootValue);
 		}
 		
+		public Node<Integer> root(){
+			return this.root;
+		}
+		
 		/**
 		 * Inserts a new element according to the BST restrictions, where a smaller node will be 
 		 * appended to the left side and a  bigger element will be inserted at the right side.

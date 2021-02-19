@@ -1,11 +1,13 @@
 package tree;
 
 import java.util.ArrayList;
-
+import java.util.List;
 
 import trees.exercises.ex1.DGraph;
 import trees.exercises.ex2;
 import trees.exercises.ex2.BST;
+import trees.exercises.ex3.BSTLevel;
+import trees.exercises.ex3;
 
 public class App {
 
@@ -33,6 +35,10 @@ public class App {
 		
 		int elements[] = {1,2,3,4,5,6,7};
 		BST bst = ex2.minimalBST(elements);
+		BSTLevel bstlevel = new BSTLevel(bst);
+		List<List<Integer>> l = ex3.depthsList(bstlevel);
+		System.out.print(l);
+		
 	
 		
 	
