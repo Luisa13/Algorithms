@@ -18,7 +18,7 @@ public class ex3 {
 	public static List<List<Integer>> depthsList(BSTLevel tree){
 		List<List<Integer>> depths = new ArrayList<List<Integer>>();
 		int depth = tree.getHeight();
-		for(int i= 0; i<=depth; i++) {
+		for(int i= 1; i<=depth; i++) {
 			List<Integer> level = tree.getNodesPerLevel(i);
 			depths.add(level);
 		}
