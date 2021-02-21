@@ -29,7 +29,7 @@ public class ex4 {
 		if(node == null)
 			return count;
 		
-		return Math.max(getHeigh(node.left, count++), 
-				getHeigh(node.right, count++));
+		return Math.max(getHeigh(node.left, count+1), 
+				getHeigh(node.right, count+1));
 	}
 }
