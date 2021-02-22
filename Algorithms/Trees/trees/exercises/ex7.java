@@ -9,9 +9,15 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.Set;
 
-
+/**
+ * 
+ * 
+ * */
 public class ex7 {
 	
+	/**
+	 * Pair class
+	 * */
 	public class Pair<T, R>{
 		T first;
 		R second;
@@ -23,38 +29,57 @@ public class ex7 {
 	}
 	
 	/**
-	 * Given a map and a pair of values, where the first element refers to the 
-	 * key and the second value to the value in a list, updated the corresponding 
-	 * list with the new value and returns it.
+	 * Returns the list of dependencies of a project referenced by a key updated with the new value.
 	 * 
 	 * @param Map <T, List<T>>
 	 * @param key T
 	 * @param value T
 	 * 
 	 * */
-	private static <T> List<T> updatedDependencies(Map<T, List<T>> map, T key, T value){
-		List<T> list = new ArrayList<T>();
-		if( map.containsKey(key) ){
-			list = map.get(key); 
+	private static <T> List<T> updatedDependencies(Map<T, List<T>> projects, T key, T value){
+		List<T> dependencies = new ArrayList<T>();
+		if( projects.containsKey(key) ){
+			dependencies = projects.get(key); 
 		}
-		list.add(value);
-		return list;
-	}
-	
-	private static <T> boolean containsAllDependencies(List<T> list, Set<T> set) {
-		
+		dependencies.add(value);
+		return dependencies;
 	}
 	
 	/**
-	 * Given a list of projects and a list of dependencies, which consists in a pair of values 
-	 * where the first elemenet is the project that depends of the other one, it retunrs a list 
-	 * of projects sorted in a way that might be build
+	 * Returns true if the set contains all the dependencies provided in the list. 
+	 * False otherwise
+	 * 
+	 * @param List<T> Dependency list
+	 * @param Set<T>  Set that might contain the dependencies
+	 * */
+	private static <T> boolean containsAllDependencies(List<T> dependencies, Set<T> set) {
+		if(dependencies == null)
+			return true;
+		
+		for(T element: dependencies) {
+			if(! set.contains(element))
+				return false;
+		}
+		
+		return true;
+	}
+	
+	/**
+	 * Given a list of projects and a list of dependencies, it returns a list of 
+	 * projects sorted in a way that should be built.
+	 * 
+	 * @param List<T> 			Unsorted project list that should be created
+	 * @param List<Pair<T,T>> 	List of dependencies where the the first element 
+	 * 							is the project that depends of the second value.
+	 * 
+	 * @return Set<T> Project list sorted in the order that should be built
+	 * 
 	 * */
 	public static <T> Set<T> buildOrder(List<T> projects, List<Pair<T,T>>dependencies){
 		Map<T, List<T>> releasing = new HashMap<>();
 		Map<T, List<T>> depMap = new HashMap<>();
 		
-		// Build a matrix of adyacence
+		// Build a adjacency matrix
 		for(Pair<T,T> dep: dependencies) {
 			releasing.put(dep.first, updatedDependencies(releasing, dep.first, dep.second));
 			depMap.put(dep.second, updatedDependencies(releasing, dep.second, dep.first));
@@ -76,12 +101,17 @@ public class ex7 {
 			T project = queue.peek();
 			List<T> deps = depMap.get(project);
 			
-			// If contains all the needed dependencies if ca be build 
+			// If contains all the needed dependencies then can be built
 			if(containsAllDependencies(deps, buildOrderList)) {
 				buildOrderList.add(project);
+				queue.poll();
+				// Once a project has been built, which other is released
 				List<T> releases = releasing.get(project);
-				for(T rel: releases) {
-					queue.add(rel);
+				if(releases != null) {
+					for(T rel: releases) {
+						if(!buildOrderList.contains(rel))
+							queue.add(rel);
+					}
 				}
 			}else {
 				T next = queue.poll();

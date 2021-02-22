@@ -1,12 +1,16 @@
 package tree;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 
 import trees.exercises.ex1.DGraph;
 import trees.exercises.ex2;
 import trees.exercises.ex2.BST;
 import trees.exercises.ex3.BSTLevel;
+import trees.exercises.ex7.Pair;
+import trees.exercises.ex7;
 import trees.exercises.ex4;
 import trees.exercises.ex3;
 
@@ -40,7 +44,7 @@ public class App {
 		List<List<Integer>> l = ex3.depthsList(bstlevel);
 		System.out.print(l);*/
 		
-		BinaryTree<Integer> tree = new BinaryTree<Integer>(3);
+		/*BinaryTree<Integer> tree = new BinaryTree<Integer>(3);
 		tree.appendLeft(2);
 		tree.appendRight(7);
 		tree.left().appendLeft(9);
@@ -49,7 +53,20 @@ public class App {
 		tree.left().left.left.appendLeft(5);
 		
 		boolean balanced = ex4.checkBalanced(tree);
-		System.out.print(balanced);
+		System.out.print(balanced);*/
+		ex7 x = new ex7();
+		List<Character> projects = new ArrayList<>(Arrays.asList('a','b','c','d', 'e', 'f')) ;
+		List<Pair<Character,Character>> dependencies = new ArrayList<>(
+				Arrays.asList( 
+						x.new Pair<Character, Character>('a', 'd'), 
+						x.new Pair<Character, Character>('f', 'b'),
+						x.new Pair<Character, Character>('b', 'd'),
+						x.new Pair<Character, Character>('f', 'a'),
+						x.new Pair<Character, Character>('d', 'c')
+						));
+		
+		Set<Character> set = ex7.buildOrder(projects, dependencies);
+		System.out.print(set);
 		
 	
 		
