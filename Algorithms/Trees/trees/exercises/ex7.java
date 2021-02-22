@@ -19,8 +19,8 @@ public class ex7 {
 	 * Pair class
 	 * */
 	public class Pair<T, R>{
-		T first;
-		R second;
+		public T first;
+		public R second;
 		
 		public Pair(T first, R second) {
 			this.first = first;

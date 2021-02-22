@@ -30,7 +30,7 @@ public class ex6 {
 	 * */
 	public static Node successor(Node node) {
 		if(node == null)
-			return;
+			return null;
 		
 		if(node.right != null)
 			return exploreLeftChildren(node.right);
