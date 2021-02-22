@@ -2,8 +2,19 @@ package trees.exercises;
 
 import trees.exercises.ex8.BTree.Node;
 
+
+/**
+ * Algorithm to write code to find the first common ancestor of two nodes in a binary tree. 
+ * Avoid storing additional nodes in a data structure. NOTE: This is not necessarily a 
+ * binary search tree
+ * 
+ * @author luisa
+ * */
 public class ex8 {
 
+	/**
+	 * Binary tree of Integer values,  with a link to the parent node.
+	 * */
 	public static class BTree{
 		private Node root;
 		

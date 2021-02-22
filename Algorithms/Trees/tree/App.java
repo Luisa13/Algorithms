@@ -78,7 +78,7 @@ public class App {
 		System.out.print(set);*/
 		
 	//  ================ EXERCISE 8 ================
-		BTree tree = new BTree(6);
+		/*BTree tree = new BTree(6);
 		tree.appendLeft(2);
 		tree.appendRight(7);
 		tree.left().appendLeft(1);
@@ -91,7 +91,7 @@ public class App {
 		
 
 		Node n = ex8.commonAncestor(n1, n2);
-		System.out.print(n.value());
+		System.out.print(n.value());*/
 	
 		
 	
