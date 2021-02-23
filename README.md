@@ -1,5 +1,7 @@
 # Algorithms
-Repository for algorithm and data structure practice (most of them in Java) collected from books, short courses and some exercises in coding platforms. Note that most of these exercises were firstly made by hand on a blank page which is how I recommend t do it. Some of them have tests, and some others not, just because the implementation was just to check if the exercise itself was correct (an the tests were not the urgence) :)
+Repository for algorithm and data structure practice (most of them in Java) collected from books, short courses and some exercises in coding platforms. Note that most of these exercises were firstly made by hand on a blank page which is how I recommend to do it. Some of them have tests, and some others not, just because the implementation was a way to check if the exercise itself was correct (an the tests were not the urgence) :)
+
+And if you feel hungry of more challenges, exercises and practices, you can alway have a look to [the coding Google competitions](https://codingcompetitions.withgoogle.com) <3
 
 Topic | Description | Link to my solution
 --------------- | --------------- | ---------------
