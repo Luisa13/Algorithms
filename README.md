@@ -25,6 +25,7 @@ Hard                  |              |[]()
 
 
 
-Other references:
-(Must do coding problems)[https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/]
-(Recenly asked coding questions)[https://www.geeksforgeeks.org/recently-asked-interview-questions-in-product-based-companies/]
+**Other References**
+
+* [Must do coding problems](https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/)
+* [Recenly asked coding questions](https://www.geeksforgeeks.org/recently-asked-interview-questions-in-product-based-companies/)
