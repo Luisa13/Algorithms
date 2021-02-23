@@ -23,9 +23,9 @@ public class App {
 		BinaryTree<Integer> bt = new BinaryTree<Integer>(1);
 		bt.appendLeft(8);
 		bt.appendRight(2);
-		bt.left().appendLeft(4);
-		bt.left().appendRight(9);
-		bt.right().appendRight(6);
+		//bt.left().appendLeft(4);
+		//bt.left().appendRight(9);
+		//bt.right().appendRight(6);
 		
 		//System.out.println(bt.getHeight());
 		//bt.print();
@@ -92,8 +92,16 @@ public class App {
 
 		Node n = ex8.commonAncestor(n1, n2);
 		System.out.print(n.value());*/
-	
+	//================ EXERCISE 10 ================
 		
+		BinaryTree<Integer> bt1 = new BinaryTree<Integer>(1);
+		bt.appendLeft(8);
+		bt.appendRight(2);
+		
+		if(bt1.equals(bt)) {
+			System.out.print("Son iguales");
+		}else
+			System.out.print("No lo son");
 	
 	}
 

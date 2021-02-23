@@ -1,7 +1,5 @@
 package tree;
 
-import java.awt.print.Printable;
-import java.sql.PreparedStatement;
 import java.lang.Math;
 
 /**
