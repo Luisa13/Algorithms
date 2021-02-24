@@ -40,3 +40,7 @@ The topics covered in this part are listed below but may serves as a reference [
 * -[ ] Handle file system objects using java.nio.file API
 * -[ ] Read and write console and file data using I/O Streams
 * -[ ] Implement serialization and deserialization techniques on Java objects
+
+
+OTHER REFERENCES
+- [Java concept tutorials](https://javaconceptoftheday.com)
