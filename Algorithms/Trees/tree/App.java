@@ -96,12 +96,12 @@ public class App {
 		BinaryTree<Integer> bt = new BinaryTree<Integer>(4);
 		bt.appendLeft(1);
 		bt.appendRight(3);
-		bt.right().appendLeft(-2);
-		bt.right().appendRight(5);
+		bt.right().appendLeft(9);
+		bt.right().appendRight(4);
 		bt.right().left.appendLeft(7);
 		bt.right().left.appendRight(2);
 		
-		int v = trees.exercises.ex12.possiblePathsToSum(bt, 12);
+		int v = trees.exercises.ex12.possiblePathsToSum(bt, 11);
 		System.out.print(v);
 	
 	}
