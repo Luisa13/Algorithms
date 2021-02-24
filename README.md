@@ -5,10 +5,10 @@ And if you feel hungry of more challenges, exercises and practices, you can alwa
 
 Topic | Description | Link to my solution
 --------------- | --------------- | ---------------
-Arrays                | Arrays and Strings practice                 |[arrays](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Arrays)
-Linked List           | Problems based on linked list structure     |[linkedlist](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/LinkedList)
-Stacks and Queues     | Stacks and queues based solutions             |[Stacks](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Stacks)
-Trees and Graphs      | Exercise to cover trees and graphs structures |[]()
+Arrays                | Arrays and Strings practice                 |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Arrays)
+Linked List           | Problems based on linked list structure     |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/LinkedList)
+Stacks and Queues     | Stacks and queues based solutions             |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Stacks)
+Trees and Graphs      | Exercise to cover trees and graphs structures |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Trees)
 Hash                  |              |[]()
 Bit Manipulation      |              |[]()
 Logic                 |              |[]()
@@ -17,7 +17,7 @@ Recursion             |              |[]()
 System Design         |              |[]()
 Sorting and searching |              |[]()
 General C++           |              |[]()
-General Java          |              |[]()
+General Java          | Some exercises to practices Java core concepts |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/JavaCore)
 DataBase              |              |[]()
 Threads               |              |[]()
 Moderate              |              |[]()
