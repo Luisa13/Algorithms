@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -45,10 +46,32 @@ class ex7 {
 		return map;
 	}
 	
+	private boolean checkValues(final char[] assertion, Set<Character> result) {
+		int i = 0;
+		for(Character c: result) {
+			if(assertion[i] != c.charValue())
+				return false;
+			i++;
+		}
+		return true;
+	}
+	
 	@Test
 	void test() {
-		Set<Character> set = trees.exercises.ex7.buildOrder(projects, dependencies);
+		trees.exercises.ex7 x = new trees.exercises.ex7();
+		List<Character> projects = new ArrayList<>(Arrays.asList('a','b','c','d', 'e', 'f')) ;
+		List<Pair<Character,Character>> dependencies = new ArrayList<>(
+				Arrays.asList( 
+						x.new Pair<Character, Character>('a', 'd'), 
+						x.new Pair<Character, Character>('f', 'b'),
+						x.new Pair<Character, Character>('b', 'd'),
+						x.new Pair<Character, Character>('f', 'a'),
+						x.new Pair<Character, Character>('d', 'c')
+						));
 		
+		Set<Character> set = trees.exercises.ex7.buildOrder(projects, dependencies);
+		char[] chars = {'e', 'f', 'b', 'd', 'a', 'c'};
+		assertTrue(checkValues(chars, set));
 	}
 
 }
