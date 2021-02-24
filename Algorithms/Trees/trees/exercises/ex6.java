@@ -4,6 +4,11 @@ package trees.exercises;
 /**
  * Write an algorithm to find the next node of a given node in a binary 
  * search tree. You may assume, that each node has a link to its parent.
+ * 						
+ * DISCLAIMER: This code has not been properly tested because it was not 
+ * provided an easy way to build a tree with the new given node structure.
+ * So is a bit tedious -.-
+ * 						
  * 
  * @author luisa
  * */

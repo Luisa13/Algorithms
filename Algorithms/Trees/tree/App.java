@@ -7,6 +7,7 @@ import java.util.Set;
 
 
 import trees.*;
+import trees.exercises.ex4;
 
 public class App {
 
@@ -93,7 +94,7 @@ public class App {
 		
 	//================ EXERCISE 11 ================	
 		
-		BinaryTree<Integer> bt = new BinaryTree<Integer>(4);
+		/*BinaryTree<Integer> bt = new BinaryTree<Integer>(4);
 		bt.appendLeft(1);
 		bt.appendRight(3);
 		bt.right().appendLeft(9);
@@ -102,7 +103,7 @@ public class App {
 		bt.right().left.appendRight(2);
 		
 		int v = trees.exercises.ex12.possiblePathsToSum(bt, 11);
-		System.out.print(v);
+		System.out.print(v);*/
 	
 	}
 

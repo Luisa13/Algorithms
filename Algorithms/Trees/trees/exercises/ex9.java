@@ -9,9 +9,12 @@ import trees.exercises.ex2.BST;
 
 /**
  * A binary search tree was created by traversing through an array from 
- * left to right and inserting each element. Given de binary search tree 
+ * left to right and inserting each element. Given the binary search tree 
  * with the distinct elements, print all the possible arrays that could 
- * have led to this tree.
+ * have led to this tree. Hard.
+ * 
+ * DISCALIMER: this code has not been properly tested and it has some errors 
+ * that should be fixed
  * 
  * @author luisa
  * 
@@ -99,6 +102,7 @@ public class ex9 {
 	
 	/**
 	 * Returns all the element permutations of a list
+	 * TODO: Contains some errors
 	 * 
 	 * @param List<Integer>
 	 * */

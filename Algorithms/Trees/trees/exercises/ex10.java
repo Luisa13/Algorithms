@@ -8,6 +8,9 @@ package trees.exercises;
  * that the subtree of n is identical to T2. That is, if you cut off the 
  * tree at node n, the two trees would be identical
  * 
+ * DISCALIMER: this code has not been properly tested and it has some errors 
+ * that should be fixed
+ * 
  * @author luisa
  * */
 
