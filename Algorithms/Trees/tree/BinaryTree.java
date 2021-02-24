@@ -77,6 +77,10 @@ public class BinaryTree<T> {
 		this.root = new Node<T>(v);
 	}
 	
+	
+	public Node<T> root(){
+		return this.root;
+	}
 
 	/**
 	 * Given a value appends a new node to the left side

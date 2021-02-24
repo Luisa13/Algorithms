@@ -5,19 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
-import trees.exercises.ex1.DGraph;
-import trees.exercises.ex11;
-import trees.exercises.ex11.BinaryTree.Node;
-import trees.exercises.ex2;
-import trees.exercises.ex2.BST;
-import trees.exercises.ex3.BSTLevel;
-import trees.exercises.ex7.Pair;
-import trees.exercises.ex8;
-import trees.exercises.ex8.BTree;
-//import trees.exercises.ex8.BTree.Node;
-import trees.exercises.ex7;
-import trees.exercises.ex4;
-import trees.exercises.ex3;
+
+import trees.*;
 
 public class App {
 
@@ -96,14 +85,24 @@ public class App {
 		System.out.print(n.value());*/
 	//================ EXERCISE 11 ================
 		
-		ex11.BinaryTree<Integer> bt = new ex11.BinaryTree<Integer>(4);
-		bt.insertLeft(2);
-		bt.insertRight(8);
+		//ex11.BinaryTree<Integer> bt = new ex11.BinaryTree<Integer>(4);
+		//bt.insertLeft(2);
+		//bt.insertRight(8);
 		//Node<Integer> n = bt.getRandomNode();
-		bt.remove(2);
+		//bt.remove(2);
 		
+	//================ EXERCISE 11 ================	
 		
-		System.out.print("END");
+		BinaryTree<Integer> bt = new BinaryTree<Integer>(4);
+		bt.appendLeft(1);
+		bt.appendRight(3);
+		bt.right().appendLeft(-2);
+		bt.right().appendRight(5);
+		bt.right().left.appendLeft(7);
+		bt.right().left.appendRight(2);
+		
+		int v = trees.exercises.ex12.possiblePathsToSum(bt, 12);
+		System.out.print(v);
 	
 	}
 
