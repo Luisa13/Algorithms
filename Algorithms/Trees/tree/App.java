@@ -6,13 +6,15 @@ import java.util.List;
 import java.util.Set;
 
 import trees.exercises.ex1.DGraph;
+import trees.exercises.ex11;
+import trees.exercises.ex11.BinaryTree.Node;
 import trees.exercises.ex2;
 import trees.exercises.ex2.BST;
 import trees.exercises.ex3.BSTLevel;
 import trees.exercises.ex7.Pair;
 import trees.exercises.ex8;
 import trees.exercises.ex8.BTree;
-import trees.exercises.ex8.BTree.Node;
+//import trees.exercises.ex8.BTree.Node;
 import trees.exercises.ex7;
 import trees.exercises.ex4;
 import trees.exercises.ex3;
@@ -20,9 +22,9 @@ import trees.exercises.ex3;
 public class App {
 
 	public static void main(String[] args) {
-		BinaryTree<Integer> bt = new BinaryTree<Integer>(1);
-		bt.appendLeft(8);
-		bt.appendRight(2);
+		//BinaryTree<Integer> bt = new BinaryTree<Integer>(1);
+		//bt.appendLeft(8);
+		//bt.appendRight(2);
 		//bt.left().appendLeft(4);
 		//bt.left().appendRight(9);
 		//bt.right().appendRight(6);
@@ -92,16 +94,16 @@ public class App {
 
 		Node n = ex8.commonAncestor(n1, n2);
 		System.out.print(n.value());*/
-	//================ EXERCISE 10 ================
+	//================ EXERCISE 11 ================
 		
-		BinaryTree<Integer> bt1 = new BinaryTree<Integer>(1);
-		bt.appendLeft(8);
-		bt.appendRight(2);
+		ex11.BinaryTree<Integer> bt = new ex11.BinaryTree<Integer>(4);
+		bt.insertLeft(2);
+		bt.insertRight(8);
+		//Node<Integer> n = bt.getRandomNode();
+		bt.remove(2);
 		
-		if(bt1.equals(bt)) {
-			System.out.print("Son iguales");
-		}else
-			System.out.print("No lo son");
+		
+		System.out.print("END");
 	
 	}
 

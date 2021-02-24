@@ -2,7 +2,9 @@ package trees.exercises;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 import java.util.Stack;
+
 
 /**
  * Implementing a binary tree class from scratch which, in addition to insert, 
@@ -11,17 +13,30 @@ import java.util.Stack;
  * and implement an algorithm for the getRandomNode and explain how you would 
  * implement the rest of the methods
  * 
+ * <DEPRECATED>
+ * Need to be fixed
+ * 
  * @author luisa
  * 
  * */
 public class ex11 {
+	/**
+	 * Binary tree
+	 * @param <T>
+	 * @author luisa
+	 * */
 	public static class BinaryTree<T>{
 		protected Node<T> root;
 		private  Map<T, Node<T>> mapValues;
 		
-		class Node<T>{
+		/**
+		 * Tree node of the binary tree
+		 * @param <T>
+		 * @author luisa
+		 * */
+		public static class Node<T>{
 			T value;
-			Node<T> left, right= null;
+			Node<T> left, right, parent= null;
 			
 			public Node(T element) {
 				this.value = element;
@@ -29,32 +44,83 @@ public class ex11 {
 			
 		}
 		
-		public BinaryTree(T element) {
-			this.root = new Node(element);
+		public BinaryTree() {
+			this.root = null;
 			this.mapValues = new HashMap<T, Node<T>>();
 		}
 		
-		public void insertRight() {
-			
+		/**
+		 * Parameter constructor
+		 * 
+		 * @param T
+		 * */
+		public BinaryTree(T element) {
+			this.root = new Node(element);
+			this.mapValues = new HashMap<T, Node<T>>();
+			mapValues.put(element, this.root);
 		}
 		
-		public void insertLeft() {
-			
+		/**
+		 * Inserts an element in the right branch
+		 * 
+		 * @param T
+		 * */
+		public void insertRight(T element) {
+			if(this.root.right == null) {
+				Node<T> newNode = new Node<T>(element);
+				this.root.right = newNode;
+				this.insert(element, newNode);
+			}
 		}
 		
-		private void insert(T element, Node node) {
+		/**
+		 * Inserts an element in the left branch
+		 * 
+		 * @param element
+		 * */
+		public void insertLeft(T element) {
+			if(this.root.left == null) {
+				Node<T> newNode = new Node<T>(element);
+				this.root.left = newNode;
+				this.insert(element, newNode);
+			}
+		}
+		/**
+		 * Stores an element value in the map associating it with the corresponding node
+		 * 
+		 * @param T
+		 * @param Node
+		 * */
+		private void insert(T element, Node<T> node) {
 			this.mapValues.put(element, node);
 		}
 		
+		/**
+		 * Finds an element in the tree and returns it
+		 * 
+		 * @param T
+		 * */
 		public Node find(T element) {
 			return this.mapValues.get(element);
 		}
 		
+		/**
+		 * Removes an element from the tree
+		 * 
+		 * @param T Element to be inserted
+		 * */
 		public void remove(T element) {
 			Node<T> n = this.mapValues.get(element);
-			n = null;
+			this.mapValues.put(element, null);
+			this.remove(n);
+
 		}
 		
+		/**
+		 * Removes an element from the tree
+		 * 
+		 * @param Node
+		 * */
 		public void remove(Node node) {
 			Stack<Node<T>> stack = new Stack<Node<T>>();
 			do {
@@ -70,6 +136,25 @@ public class ex11 {
 				}
 				
 			}while(! stack.isEmpty());
+		}
+		
+		/**
+		 * Gets a random node of the tree without removing it from the structure
+		 * 
+		 * */
+		public Node<T> getRandomNode() {
+			Random random = new Random();
+			Node<T> randomValue = null;
+			Object[] objs = this.mapValues.values().toArray();
+			try {
+				Node<T>[] nodes = (Node<T>[]) objs;
+				 randomValue= nodes[random.nextInt(nodes.length)];
+				
+			}catch(Exception ex) {
+				System.out.print("ERROR: " + ex.getMessage());
+			}
+			
+			return randomValue;
 		}
 		
 		
