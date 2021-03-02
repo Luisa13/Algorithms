@@ -29,3 +29,4 @@ Hard                  |              |[]()
 
 * [Must do coding problems](https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/)
 * [Recenly asked coding questions](https://www.geeksforgeeks.org/recently-asked-interview-questions-in-product-based-companies/)
+* [Classic computer Science problems in python](https://github.com/WillKoehrsen/classic_computer_science)
