@@ -9,13 +9,12 @@ public class Director extends Employee{
 
 	@Override
 	public Rank getType() {
-		// TODO Auto-generated method stub
-		return null;
+		return Rank.DIRECTOR;
 	}
 
 	@Override
-	public void getPromoted() {
-		// TODO Auto-generated method stub
+	public Rank getPromoted() {
+		return Rank.DIRECTOR;
 		
 	}
 
