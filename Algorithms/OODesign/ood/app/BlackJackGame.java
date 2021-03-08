@@ -12,7 +12,16 @@ public  class BlackJackGame {
 		bjCards.shuffle();
 		BlackJackHand hand = new BlackJackHand(bjCards.deliverHand(2));
 		BlackJackHand hand2 = new BlackJackHand(bjCards.deliverHand(2));
-		System.out.print(hand.score());
+		
+		//==========================================
+		System.out.println("Player: " + hand.score());
+		System.out.println("Cruppier: " + hand2.score());
+		if(hand.isTheWinner(false, hand2)) {
+			System.out.print("you have won");
+		}
+		else {
+			System.out.print("Cruppier won");
+		}
 	}
 
 }

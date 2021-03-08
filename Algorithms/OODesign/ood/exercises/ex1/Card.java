@@ -55,5 +55,9 @@ public abstract class Card {
 		this.available = state;
 	}
 	
+	protected int getOriginalValue() {
+		return this.value;
+	}
+	
 	public abstract int getValue();
 }

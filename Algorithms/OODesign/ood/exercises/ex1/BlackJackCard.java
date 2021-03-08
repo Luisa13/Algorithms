@@ -12,10 +12,10 @@ public class BlackJackCard extends Card{
 	 * */
 	@Override
 	public int getValue() {
-		if(this.getValue() >= 10)
+		if(this.getOriginalValue() >= 10)
 			return 10;
 		
-		return this.getValue();
+		return this.getOriginalValue();
 	}
 
 }

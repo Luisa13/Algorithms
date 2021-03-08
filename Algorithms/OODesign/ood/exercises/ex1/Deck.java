@@ -28,11 +28,11 @@ public class Deck <T extends Card>{
 			for(int value = 1; value<= MAX_CARDS; value++) {
 					try {
 						// TODO: Implement Factory Method to fix this?
-						T card = type.getDeclaredConstructor().newInstance(value, suit);
-						this.myDeck.add(card);
-					} catch (IllegalArgumentException | InstantiationException | 
-							IllegalAccessException | InvocationTargetException | 
-							NoSuchMethodException | SecurityException e) {
+						//T card = type.getDeclaredConstructor().newInstance(value, suit);
+						
+						BlackJackCard card = new BlackJackCard(suit, value);
+						this.myDeck.add((T) card);
+					} catch (IllegalArgumentException | SecurityException  e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					} 
