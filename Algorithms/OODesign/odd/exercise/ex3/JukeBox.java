@@ -7,7 +7,8 @@ import java.util.Map;
 
 /**
  * Simulates a Jukebox to play music. To make it simple there is no thread use in this class, 
- * but ideally every playlist that is meant to be played, should be a new thread.
+ * but ideally every playlist that is meant to be played, should be a new thread while the "GUI"
+ * get idle to allow the user interact with it.
  * 
  * @author luisa
  * */
@@ -72,6 +73,12 @@ public class JukeBox {
 		
 	}
 	
+	/**
+	 * Adds a song to a playlist. Both must exist in the system already.
+	 * 
+	 * @param String
+	 * @param Song
+	 * */
 	public void addSongToPlaylist( String playlistName, Song song) {
 		Playlist p = instance.playlists.get(playlistName);
 		p.addSong(song);
