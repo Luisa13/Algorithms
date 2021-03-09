@@ -48,4 +48,14 @@ public class Playlist {
 			currentSong.play();
 		}
 	}
+	
+	
+	/**
+	 * Adds a song to the playlist
+	 * 
+	 * @param newSong
+	 * */
+	public void addSong(Song newSong) {
+		this.songs.add(newSong);
+	}
 }
