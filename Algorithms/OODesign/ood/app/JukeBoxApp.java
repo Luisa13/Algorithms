@@ -4,6 +4,9 @@ import odd.exercise.ex3.JukeBox;
 import odd.exercise.ex3.Playlist;
 import odd.exercise.ex3.Song;
 
+/**
+ * This is the simulation of a Jukebox to play music. Shake it out baby!
+ * */
 public class JukeBoxApp {
 	
 	public static void main(String[] args) throws InterruptedException {
@@ -14,8 +17,8 @@ public class JukeBoxApp {
 		Song song3 = new Song("everything is ok", "B M");
 		Song song4 = new Song("tu puta madre", "Arabola");
 		Song song5 = new Song("I want to eat spaguetti tonight", "Mostaccini");
-		Song song6 = new Song("Get the hell out of my kitchen", "feminist mama");
-		Song song7 = new Song("my room got dark", "emo boy");
+		Song song6 = new Song("Get the hell out of my kitchen", "Feminist Mamma");
+		Song song7 = new Song("my room got dark", "The emo boy");
 		
 		mp3.createPlaylist("myplaylist");
 		mp3.addSongToPlaylist("myplaylist", song1);

@@ -6,6 +6,12 @@ import ood.exercises.ex1.BlackJackCard;
 import ood.exercises.ex1.BlackJackHand;
 import ood.exercises.ex1.Deck;
 
+/**
+ * This is a simple simulation of a player (user) playing against a fictional cruppier.
+ * Good luck!
+ * 
+ * @author luisa
+ * */
 public  class BlackJackGame {
 
 
