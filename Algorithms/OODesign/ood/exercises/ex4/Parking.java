@@ -1,5 +1,7 @@
 package ood.exercises.ex4;
 
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,9 +22,7 @@ public class Parking {
 	private int lotsAvailable;
 	private final int TAX =10;
 	
-	/**
-	 * 
-	 * */
+
 	private Parking(int nSections, int nLots) {
 		this.sections = new ArrayList<Section>();
 		
@@ -34,11 +34,11 @@ public class Parking {
 	}
 	
 	/**
-	 * Get an instance from the parking system
+	 * Gets a new instance of the parking system
 	 * @param int
 	 * @param int
 	 * */
-	public Parking getInstance(int nSections, int nLots) {
+	public static Parking getInstance(int nSections, int nLots) {
 		if(instance == null)
 			instance = new Parking(nSections, nLots);
 		
@@ -46,7 +46,8 @@ public class Parking {
 	}
 	
 	/**
-	 * Gets a car into the parking
+	 * Gets a car into the parking and park it taking an available place off
+	 * 
 	 * @param Car
 	 * @throws Exception 
 	 * */
@@ -54,37 +55,71 @@ public class Parking {
 		Section section = instance.sections.get(0);
 		int i = 0;
 		
-		while(!section.isFull()) {
+		while(section.isFull()) {
 			section = instance.sections.get(i);
 			i++;
 		}
 		car.setArrivalTime();
+		Ticket ticket = new Ticket(car.getPlate(), car.getArrivalTime());
+		instance.lotsAvailable --;
 		
 		// Update the state of the list
 		section.addCar(car);
 		instance.sections.remove(i);
 		instance.sections.add(section);
+		
+		return ticket;
 
 	}
 	
-	public void parkACar() {
+	/**
+	 * Gets price according to the time spent in the parking
+	 * @param Ticket
+	 * */
+	public float getPrice(Ticket ticket) {
+		long arrivalTime = ticket.getArrivalTime();
+		float price = (System.currentTimeMillis() - arrivalTime) * instance.TAX;
 		
+		return price;
 	}
 	
-	public float getPrice() {
-		
-	}
 	
-	public void exitACar() {
+	/**
+	 * Gets a car out of the system
+	 * @throws Exception 
+	 * 
+	 * */
+	public void exitACar(Car car, Ticket ticket) throws Exception {
+		if(ticket.getCarPlate() != car.getPlate() || ticket.getArrivalTime() != car.getArrivalTime()) {
+			throw new Exception ("This car does not correspond to the ticket");
+		}
+		
+		// Removes it from the corresponding section
+		Section section = getSectionOfCar(car);
+		instance.sections.remove(section);
+		section.remove(car);
+		instance.sections.add(section);
+		
+		instance.lotsAvailable ++;
 		
 	}
 	
 	public boolean isSomePlaceAvailable() {
-		
+		return instance.lotsAvailable > 0;
 	}
 	
+	/**
+	 * Gets the section where a car is parked
+	 * @param Car
+	 * */
 	public Section getSectionOfCar(Car car) {
+		for(Section section: instance.sections) {
+			if(section.contains(car))
+				return section;
+		}
 		
+		System.out.println("Car not found in this parking");
+		return null;
 	}
 	
 	

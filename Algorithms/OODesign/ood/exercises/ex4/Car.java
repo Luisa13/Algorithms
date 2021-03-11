@@ -17,6 +17,7 @@ public class Car implements Comparable<Car> {
 	public Car(String plate, String brand) {
 		this.plate = plate;
 		this.brand = brand;
+		this.arrivalTime = 0;
 	}
 	
 	public String getPlate() {
@@ -37,6 +38,31 @@ public class Car implements Comparable<Car> {
 	
 	@Override
 	public int compareTo(Car o) {
-		return Long.compare(this.arrivalTime, o.arrivalTime);
+		return Long.compare(arrivalTime, o.arrivalTime);
+	}
+	
+	@Override
+	public int hashCode() {
+		return this.plate.hashCode();
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj == this)
+			return true;
+		
+		if(obj == null || obj.getClass() != this.getClass())
+			return false;
+		
+		Car car = (Car) obj;
+		return this.brand.equals(car.brand) &&
+				this.plate == car.plate &&
+				this.arrivalTime == car.arrivalTime;
+		
+	}
+	
+	@Override
+	public String toString() {
+		return plate + "  " + brand;
 	}
 }
