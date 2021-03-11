@@ -1,8 +1,8 @@
 package ood.app;
 
-import odd.exercise.ex3.JukeBox;
-import odd.exercise.ex3.Playlist;
-import odd.exercise.ex3.Song;
+import ood.exercise.ex3.JukeBox;
+import ood.exercise.ex3.Playlist;
+import ood.exercise.ex3.Song;
 
 /**
  * This is the simulation of a Jukebox to play music. Shake it out baby!

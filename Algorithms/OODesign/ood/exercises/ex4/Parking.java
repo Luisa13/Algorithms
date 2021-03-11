@@ -1,4 +1,4 @@
-package odd.exercises.ex4;
+package ood.exercises.ex4;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +20,9 @@ public class Parking {
 	private int lotsAvailable;
 	private final int TAX =10;
 	
+	/**
+	 * 
+	 * */
 	private Parking(int nSections, int nLots) {
 		this.sections = new ArrayList<Section>();
 		
@@ -30,6 +33,11 @@ public class Parking {
 		this.lotsAvailable = nSections * nLots;
 	}
 	
+	/**
+	 * Get an instance from the parking system
+	 * @param int
+	 * @param int
+	 * */
 	public Parking getInstance(int nSections, int nLots) {
 		if(instance == null)
 			instance = new Parking(nSections, nLots);
@@ -37,8 +45,26 @@ public class Parking {
 		return instance;
 	}
 	
-	public Ticket enterACar(Car car) {
+	/**
+	 * Gets a car into the parking
+	 * @param Car
+	 * @throws Exception 
+	 * */
+	public Ticket enterACar(Car car) throws Exception {
+		Section section = instance.sections.get(0);
+		int i = 0;
 		
+		while(!section.isFull()) {
+			section = instance.sections.get(i);
+			i++;
+		}
+		car.setArrivalTime();
+		
+		// Update the state of the list
+		section.addCar(car);
+		instance.sections.remove(i);
+		instance.sections.add(section);
+
 	}
 	
 	public void parkACar() {

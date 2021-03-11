@@ -1,4 +1,4 @@
-package odd.exercises.ex4;
+package ood.exercises.ex4;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -28,7 +28,7 @@ public class Section {
 		return this.cars.contains(car);
 	}
 	
-	public void addCar(Car car) throws Exception {
+	public addCar(Car car) throws Exception {
 		if(! isFull()) 
 			this.cars.add(car);
 		else

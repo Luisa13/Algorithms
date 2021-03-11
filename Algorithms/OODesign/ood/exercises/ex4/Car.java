@@ -1,7 +1,13 @@
-package odd.exercises.ex4;
+package ood.exercises.ex4;
 
 import java.util.Date;
 
+/**
+ * Represents a car defined mainly by the plate as identity attribute and the brand. 
+ * Once the car gets into the parking system, is assigned an arrival time automatically.
+ * 
+ * @author luisa
+ * */
 public class Car implements Comparable<Car> {
 
 	private String plate;

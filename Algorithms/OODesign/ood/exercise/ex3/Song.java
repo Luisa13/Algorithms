@@ -1,4 +1,4 @@
-package odd.exercise.ex3;
+package ood.exercise.ex3;
 
 
 /**
