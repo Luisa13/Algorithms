@@ -5,7 +5,7 @@ import java.util.Queue;
 
 /**
  * You are given two sorted arrays, A and B, where A has a large enough buffer at 
- * the end to hold B. Write a metod to merge B into A in sorted order.
+ * the end to hold B. Write a method to merge B into A in sorted order.
  * 
  * 
  * WARNING: more test are needed in order to guarantee a free bugs code :P
@@ -22,7 +22,7 @@ public class ex1 {
 		return merges(a, b);
 	}
 	
-	
+	// NAIVE APPROACH
 	private static int[] merges(int[] a, int[] b) {
 		int i = 0;
 		int j = 0;
@@ -47,7 +47,6 @@ public class ex1 {
 					i++;
 					j++;
 				}while(j < b.length && q.peek() > b[j]);
-				
 				// Once we found in a an element larger, we need to catch up 
 				//with those we kept to make some room.
 				while(!q.isEmpty() && q.peek() < b[j]) {
@@ -63,9 +62,9 @@ public class ex1 {
 	}
 	
 	
-	// Improvement
+	// IMPROVEMENT
 	// It's actually way better start off by the END, since we already 
-	//have some space there (less messy cause there is no need to move aaaall the elemenets)
+	//have some space there (less messy cause there is no need to move aaaall the elements)
 	private static int[] merges2(int[] a, int[] b) {
 		
 		

@@ -7,8 +7,8 @@ public class app {
 	public static void main(String[] args) {
 		
 		// EXERCISE 1
-		int a[] = {1,2,4,7,30,37,-1,-1,-1,-1,-1};
-		int b[] = {2,3,5,20,50};
+		int a[] = {7,9,19,40,44,-1,-1,-1,-1,-1,-1};
+		int b[] = {1,2,10,20,26,30};
 		
 		int[] res = ex1.merge(a, b);
 		
