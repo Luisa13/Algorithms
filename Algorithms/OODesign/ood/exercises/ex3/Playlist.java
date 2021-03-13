@@ -1,4 +1,4 @@
-package ood.exercise.ex3;
+package ood.exercises.ex3;
 
 import java.util.ArrayList;
 import java.util.List;
