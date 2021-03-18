@@ -67,7 +67,6 @@ public class ex1 {
 	//have some space there (less messy cause there is no need to move aaaall the elements)
 	private static int[] merges2(int[] a, int[] b) {
 		
-		
 		return a;
 	}
 	
