@@ -21,7 +21,7 @@ public class ex2 {
 	 * @param String[]
 	 * @return List<String>
 	 * */
-	public List<String> groupByAnagrams(String[] strings){
+	public static List<String> groupByAnagrams(String[] strings){
 		Map<String, List<String>> map= new HashMap<>();
 		for(String s: strings) {
 			String key = sortChars(s);
@@ -49,7 +49,7 @@ public class ex2 {
 	 * @param String
 	 * @return String
 	 * */
-	private String sortChars(String s) {
+	private static String sortChars(String s) {
 		char[] chars = s.toCharArray();
 		Arrays.sort( chars );
 		return String.valueOf(chars);
