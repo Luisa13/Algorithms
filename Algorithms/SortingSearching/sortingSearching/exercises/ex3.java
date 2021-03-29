@@ -5,6 +5,10 @@ package sortingSearching.exercises;
  * write code to find an element in the array. You may assume that the array was originally 
  * sorted in increasing order.
  * 
+ * THE KEY:
+ * The approach for this exercise is a classic binary search with a twist. The key is to 
+ * detect before going with the BS in which sorted range of the array is my element.
+ * 
  * @author luisa
  * 
  * */
@@ -17,8 +21,10 @@ public class ex3 {
 	private static int searchRotated(int [] array, int left, int right, int element) {
 		int half = (left + right) / 2;
 		
+		// In case it's rotated, detect the piece of the array which is sorted 
+		// and set a range to look for it there
 		if(array[left] > array[right]) { // ---> e.g. [15|16|20|1|5|14]	
-			if(element < array[right]) {
+			if(element <= array[right]) {
 				while(element < array[half])
 					half ++;
 				
@@ -30,14 +36,6 @@ public class ex3 {
 				
 				return search(array, left, half, element);
 			}
-
-			/*if(element < array[left]) {
-				//if(element > array[half]) {
-					while(element > array[half])
-						half --;
-				//}
-				return search(array, left, half-1, element);
-			}*/
 		}
 		
 
@@ -46,9 +44,12 @@ public class ex3 {
 
 	}
 	
+	/**
+	 * Classic binary search
+	 * */
 	private static int search(int[] array, int left, int right, int element) {
-		if(left < right) {
-			int half = (left + right)/2;
+		if(left <= right) {
+			int half = left + (right-left)/2;
 			if(element == array[half] )
 				return half;
 			
@@ -56,7 +57,7 @@ public class ex3 {
 				return search (array, half+1, right, element);
 			
 			else if(element < array[half])
-				return search(array, left, half, element);
+				return search(array, left, half-1, element);
 			
 		}
 		
