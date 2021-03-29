@@ -11,7 +11,7 @@ package sortingSearching.exercises;
 public class ex3 {
 
 	public static int searchRotated(int[] array, int element) {
-		return searchRotated(array, 0, array.length, element);
+		return searchRotated(array, 0, array.length-1, element);
 	}
 	
 	private static int searchRotated(int [] array, int left, int right, int element) {
@@ -23,15 +23,21 @@ public class ex3 {
 					half ++;
 				
 				return search(array, half, right, element);
+				
+			}else if(element > array[right]) {
+				while(element > array[half])
+					half --;
+				
+				return search(array, left, half, element);
 			}
 
-			if(element < array[left]) {
+			/*if(element < array[left]) {
 				//if(element > array[half]) {
 					while(element > array[half])
 						half --;
 				//}
 				return search(array, left, half-1, element);
-			}
+			}*/
 		}
 		
 
@@ -41,16 +47,22 @@ public class ex3 {
 	}
 	
 	private static int search(int[] array, int left, int right, int element) {
-		if(left > right)
-			return -1;
-		int half = (left + right)/2;
+		if(left < right) {
+			int half = (left + right)/2;
+			if(element == array[half] )
+				return half;
+			
+			if(element> array[half])
+				return search (array, half+1, right, element);
+			
+			else if(element < array[half])
+				return search(array, left, half, element);
+			
+		}
 		
-		if(element> array[half])
-			return search (array, half+1, right, element);
+		return -1;
 		
-		else if(element < array[half])
-			return search(array, left, half, element);
 		
-		return array[half];
+		
 	}
 }
