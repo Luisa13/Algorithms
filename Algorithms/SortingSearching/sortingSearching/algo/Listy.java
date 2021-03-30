@@ -11,7 +11,11 @@ public class Listy extends ArrayList<Integer> {
 
 	
 	public Integer elementAt(int index) {
-		return this.get(index); 
+		try {
+			return this.get(index); 
+		}catch(IndexOutOfBoundsException ex) {
+			return -1;
+		}
 	} 
 
 }
