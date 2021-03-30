@@ -49,3 +49,4 @@ OTHER REFERENCES
 - [Java interview questions](https://www.journaldev.com/1321/java-string-interview-questions-and-answers)
 - [100 Java interview questions](https://www.edureka.co/blog/interview-questions/java-interview-questions/)
 - [Java Core concepts](https://www.journaldev.com/2366/core-java-interview-questions-and-answers)
+- [Java Google code style](https://google.github.io/styleguide/javaguide.html)
