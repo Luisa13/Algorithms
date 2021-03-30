@@ -1,7 +1,10 @@
 package sortingSearching.App;
 
+
+import sortingSearching.algo.Listy;
 import sortingSearching.exercises.ex1;
 import sortingSearching.exercises.ex3;
+import sortingSearching.exercises.ex4;
 
 public class app {
 
@@ -17,9 +20,23 @@ public class app {
 			System.out.print(n + ", ");*/
 		
 		// EXERCISE 3
-		int arr[] = {15,16,20,1,5,14};
+		/*int arr[] = {15,16,20,1,5,14};
 		int r = ex3.searchRotated(arr, 7);
-		System.out.print(r);
+		System.out.print(r);*/
+		
+		// EXERCISE 4
+		Listy l = new Listy();
+		l.add(1);
+		l.add(3);
+		l.add(5);
+		l.add(9);
+		l.add(11);
+		l.add(14);
+		l.add(20);
+		l.add(40);
+		
+		int pos = ex4.searchNoSize(l, 220);
+		System.out.print(pos);
 		
 	}
 
