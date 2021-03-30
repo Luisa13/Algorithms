@@ -5,6 +5,7 @@ import sortingSearching.algo.Listy;
 import sortingSearching.exercises.ex1;
 import sortingSearching.exercises.ex3;
 import sortingSearching.exercises.ex4;
+import sortingSearching.exercises.ex5;
 
 public class app {
 
@@ -25,7 +26,7 @@ public class app {
 		System.out.print(r);*/
 		
 		// EXERCISE 4
-		Listy l = new Listy();
+		/*Listy l = new Listy();
 		l.add(1);
 		l.add(3);
 		l.add(5);
@@ -36,7 +37,12 @@ public class app {
 		l.add(40);
 		
 		int pos = ex4.searchNoSize(l, 220);
-		System.out.print(pos);
+		System.out.print(pos);*/
+		
+		// EXERCISE 5
+		/*String strings [] = {"asd", "", "", "", "baff", "", "cft", "", "", "fsd", "tre", "", "", ""};
+		int pos = ex5.sparseSearch(strings, "asd");
+		System.out.print(pos);*/
 		
 	}
 
