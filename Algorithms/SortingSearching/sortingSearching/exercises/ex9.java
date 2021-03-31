@@ -9,9 +9,14 @@ package sortingSearching.exercises;
  * */
 public class ex9 {
 	
+	static final int N = 3;
+	static final int M =3;
+	
 	public static void searchSortedMatrix(int[][] m, int M, int N, int element) {
-		if(M <=0 || N <= 0)
-			return null;
+		if(M <=0 || N <= 0) {
+			System.out.println("ERROR: The matrix dimensions are not correct");
+			return;
+		}
 		
 		int row = getRowPosition(m, element);
 		int col = N;
@@ -34,7 +39,32 @@ public class ex9 {
 	 * @return int
 	 * */
 	private static int getRowPosition(int[][] m, int element) {
+		return getClosestPosition(m, 0, m.length, m.length, element);
+	}
+	
+	/**
+	 * 
+	 * */
+	private static int getClosestPosition(int[][]m, int left, int right, int previous, int element) {
 		
+		if(m[right][N] > m[previous][N]) {
+			
+			int mid = left + (right-left)/2;
+			
+			// We'll update previous just when the current item is SMALLER but at the 
+			// same time that item is LARGER than the key element. 
+			// So we can make sure we are keeping the smaller value out of all the larger than the element
+			
+			if(m[previous][N] < m[mid][N] && m[mid][N]> element)
+				previous = mid;
+			
+			if(m[mid][N] > element)
+				getClosestPosition(m, left, mid-1, previous, element);
+			
+			if(m[mid][N] < element)
+				getClosestPosition(m, mid+1, right, previous, element);
+		}
+		return -1;
 	}
 	
 	
@@ -47,7 +77,25 @@ public class ex9 {
 	 * @return int
 	 * */
 	private static int searchElement(int[] arr, int element) {
-		
+		return searchElement(arr, 0, arr.length, element);
+	}
+	
+	/**
+	 * Classic binary search in an integer array
+	 * */
+	private static int searchElement(int[] arr, int left, int right, int element) {
+		if(right >= left) {
+			int mid = left + (right-left)/2;
+			if(arr[mid] == element)
+				return mid;
+			
+			if(arr[mid] > element)
+				return searchElement(arr, left, mid-1, element);
+			
+			if(arr[mid] < element)
+				return searchElement(arr, mid+1, right, element);
+		} 
+		return -1;
 	}
 
 }
