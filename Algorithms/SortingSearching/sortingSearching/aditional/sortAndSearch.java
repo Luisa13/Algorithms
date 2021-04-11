@@ -1,4 +1,4 @@
-package sortingSearching.algo;
+package sortingSearching.aditional;
 
 public class sortAndSearch {
 

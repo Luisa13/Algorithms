@@ -1,4 +1,4 @@
-package sortingSearching.algo;
+package sortingSearching.aditional;
 
 import java.util.ArrayList;
 
