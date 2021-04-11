@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import sortingSearching.algo.Listy;
+import sortingSearching.aditional.Listy;
 
 class ex4 {
 	
