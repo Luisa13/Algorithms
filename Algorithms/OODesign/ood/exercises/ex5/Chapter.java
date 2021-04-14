@@ -37,11 +37,12 @@ public class Chapter {
 	
 	/**
 	 * Display the next page in the chapter
+	 * @throws Exception 
 	 * 
 	 * */
-	public void turnPage() {
+	public void turnPage() throws Exception {
 		if(pageKeeper == lastPage)
-			return;
+			throw new Exception("End of chapter");
 		
 		Page page = this.pages.get(this.pageKeeper);
 		pageKeeper ++;
@@ -64,6 +65,22 @@ public class Chapter {
 	 * */
 	public Page pageAt(int pageNum) {
 		return this.pages.get(pageNum);
+	}
+	
+	/**
+	 * Returns the last page that was displayed before the book was closed
+	 * @return Page
+	 * */
+	public Page getLastPageOpen() {
+		return this.pages.get(this.pageKeeper);
+	}
+	
+	public int numberOfPages() {
+		return this.lastPage;
+	}
+	
+	public int getId() {
+		return this.id;
 	}
 
 }
