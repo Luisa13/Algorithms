@@ -1,5 +1,6 @@
 package sortingAndSearching.App;
 
+import sortingSearching.exercises.ex11;
 import sortingSearching.exercises.ex8;
 
 public class app {
@@ -36,6 +37,11 @@ public class app {
 		 */
 		
 		// EXERCISE 8
+		
+		// EXERCISE 11
+		int arr[] = {2,12,45,8,19};
+		ex11.peaksAndValleys(arr);
+		
 		
 
 	}

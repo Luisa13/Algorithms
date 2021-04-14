@@ -9,10 +9,10 @@ package sortingSearching.exercises;
 public class ex11 {
 
 	/**
-	 * Sorts an array interspelling the highest numbers and the lowest ones
+	 * Sorts an array interspersing the highest numbers and the lowest ones
 	 * */
-	public int[] peaksAndValleys(int[] arr) {
-		return sort(arr, new int[arr.length], 0, arr.length);
+	public static int[] peaksAndValleys(int[] arr) {
+		return sort(arr, new int[arr.length], 0, arr.length-1);
 	}
 	
 	/**
@@ -23,7 +23,7 @@ public class ex11 {
 	 * @param low int
 	 * @param hight int
 	 * */
-	private int[] sort(int[] arr, int[] helper, int low, int high) {
+	private static int[] sort(int[] arr, int[] helper, int low, int high) {
 		if(low < high) {
 			int mid = low + (high + low)/2;
 			sort(arr, helper, low, mid);
@@ -43,7 +43,7 @@ public class ex11 {
 	 * @param mid int
 	 * @param high int
 	 * */
-	private int[] mergePeakAndValley(int[] arr, int[] helper, int low, int mid, int high) {
+	private static int[] mergePeakAndValley(int[] arr, int[] helper, int low, int mid, int high) {
 		for(int i = low; i< high; i++) 
 			helper[i] = arr[i];
 		
@@ -88,7 +88,7 @@ public class ex11 {
 	 * 
 	 * @param index int
 	 * */
-	private boolean isPair(int index) {
+	private static boolean isPair(int index) {
 		if(index%2 <= 0)
 			return true;
 		

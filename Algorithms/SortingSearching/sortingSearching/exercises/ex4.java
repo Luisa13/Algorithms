@@ -2,7 +2,7 @@ package sortingSearching.exercises;
 
 import java.util.List;
 
-import sortingSearching.algo.Listy;
+import sortingSearching.aditional.Listy;
 
 /**
  * You are given an array like data structure Listy which lacks a size method.
