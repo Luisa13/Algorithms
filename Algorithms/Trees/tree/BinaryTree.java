@@ -77,6 +77,14 @@ public class BinaryTree<T> {
 		this.root = new Node<T>(v);
 	}
 	
+	// TODO
+	/*public BinaryTree(T[] values) {
+		for(int i = 0; i< values.length-1; i++) {
+			this.root.appendLeft(values[i]);
+			this.root.appendRight(values[i+1]);
+		}
+	}*/
+	
 	
 	public Node<T> root(){
 		return this.root;
