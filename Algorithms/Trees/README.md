@@ -1,3 +1,5 @@
+# **Trees & Graphs**
+
 > TODO
 > * -[ ] Test exercise 5
 > * -[ ] Test exercise 6: Tedious way to do so. Provide a binary tree class using the node version that exercise is using
