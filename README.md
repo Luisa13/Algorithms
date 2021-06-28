@@ -17,7 +17,7 @@ Sorting and searching | Exercises based on popular searching and sorting algorit
 General C++           |              |[]()
 General Java          | Some exercises to practices Java core concepts |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/JavaCore)
 DataBase              |              |[]()
-Threads               |              |[]()
+Threads               | Basics about concurrency   |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Threads)
 Moderate              |              |[]()
 Hard                  |              |[]()
 
