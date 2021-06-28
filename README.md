@@ -10,8 +10,6 @@ Linked List           | Problems based on linked list structure     |[exercises]
 Stacks and Queues     | Stacks and queues based solutions             |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Stacks)
 Trees and Graphs      | Exercise to cover trees and graphs structures and the many ways of traverse it |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Trees)
 Hash                  |              |[]()
-Bit Manipulation      |              |[]()
-Logic                 |              |[]()
 OO Design             | Practicing around the desing of a system with object-oriented principles |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/OODesign)
 Recursion             |              |[]()
 System Design         |              |[]()
@@ -25,8 +23,20 @@ Hard                  |              |[]()
 
 
 
-**Other References**
 
+
+</br>
+
+REFERENCES & RESOURCES
+
+**General**
+- [William Fiset’s youtube channeL](https://www.youtube.com/channel/UCD8yeTczadqdARzQUp29PJw)
+- [MIT Lectures](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/)
+- [System Design Course](https://www.educative.io/courses/grokking-the-system-design-interview)
+- [System Design Basics](https://github.com/donnemartin/system-design-primer)
+- [Git Scalability](https://github.com/binhnguyennus/awesome-scalability)
+
+**Just Coding**
 * [Must do coding problems](https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/)
 * [Recenly asked coding questions](https://www.geeksforgeeks.org/recently-asked-interview-questions-in-product-based-companies/)
 * [Classic computer Science problems in python](https://github.com/WillKoehrsen/classic_computer_science)
