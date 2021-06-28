@@ -29,6 +29,7 @@ public class Chapter {
 		this.pages = new Vector<Page>();
 		this.startPage = 0;
 		this.lastPage = pages.size() - 1;
+		this.pages = new Vector<>();
 		for(Page pg: pages) {
 			this.pages.add(pg);
 		}
