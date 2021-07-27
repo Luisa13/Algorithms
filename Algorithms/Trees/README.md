@@ -8,5 +8,7 @@
 > * -[ ] Exercise 11: Deprecated. The inner data structure should be reviwed
 
 
-REFERENCES
--[Main graphs algo](https://towardsdatascience.com/10-graph-algorithms-visually-explained-e57faa1336f3)
+_REFERENCES:_
+
+
+* [Main graphs algo](https://towardsdatascience.com/10-graph-algorithms-visually-explained-e57faa1336f3)
