@@ -11,7 +11,7 @@ Stacks and Queues     | Stacks and queues based solutions             |[exercise
 Trees and Graphs      | Exercise to cover trees and graphs structures and the many ways of traverse it |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Trees)
 Hash                  |              |[]()
 OO Design             | Practicing around the desing of a system with object-oriented principles |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/OODesign)
-Recursion             |              |[]()
+Recursion & Dynamic Programming  | Recursion type of problems  |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Recursion)
 System Design         |              |[]()
 Sorting and searching | Exercises based on popular searching and sorting algorithms with a twist |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/SortingSearching)
 General C++           |              |[]()
@@ -32,6 +32,7 @@ REFERENCES & RESOURCES
 **General**
 - [William Fiset’s youtube channeL](https://www.youtube.com/channel/UCD8yeTczadqdARzQUp29PJw)
 - [MIT Lectures](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/)
+- [Back to Back SWE channel](https://www.youtube.com/c/BackToBackSWE/videos)
 - [System Design Course](https://www.educative.io/courses/grokking-the-system-design-interview)
 - [System Design Basics](https://github.com/donnemartin/system-design-primer)
 - [Git Scalability](https://github.com/binhnguyennus/awesome-scalability)
