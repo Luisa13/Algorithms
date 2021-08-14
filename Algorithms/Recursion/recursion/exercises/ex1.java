@@ -6,7 +6,9 @@ import java.util.List;
 
 /**
  * Triple Set: A child is running up a staircase with n steps and can hop either 1 steps, 2 steps, or 3 steps at a time. 
- * Implement a method to count how many possible ways a child can run up the stairs
+ * Implement a method to count how many possible ways a child can run up the stairs.
+ * 
+ * 
  * 
  * APPROACH (I)
  * So this is actually a combinatory problem, when we need to get the total number of stairs the child has to climb (n) 
@@ -18,6 +20,8 @@ import java.util.List;
  * Nevertheless the previous approach is not really efficient, mainly, due to the fact that it's recursive. 
  * In addition , the algorithm is evaluating cases for which already got an answer before. A way to cut this off, 
  * is storing the new values as they are calculated (memoization).
+ * 
+ * @author luisa
  * 
  * */
 public class ex1 {
