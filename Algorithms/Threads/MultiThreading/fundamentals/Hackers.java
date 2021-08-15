@@ -30,7 +30,8 @@ public class Hackers {
 	}
 	
 	/**
-	 * This class represents the vault that remains locked under a password.
+	 * This class represents the vault that remains locked under a password which has been set 
+	 * randomly when the object is created.
 	 * 
 	 * */
 	private static class BlackBox{
@@ -42,6 +43,15 @@ public class Hackers {
 			this.password = random.nextInt(MAXPASSWORD + 1);
 		}
 		
+		/**
+		 * Opens the system if it is provided by the right password. It actually takes 
+		 * 5 milliseconds to check if the given password is correct or not. 
+		 * Returns true if it's correct, and false otherwise.
+		 * 
+		 * @param int
+		 * @return boolean
+		 * 
+		 * */
 		public boolean open(int password) {
 			
 			try {
