@@ -145,7 +145,7 @@ public class Hackers {
 				System.out.println(i);
 			}
 			
-			System.out.println("Game over hackers! B) ");
+			System.out.println("Game over hackers! B-) ");
 			System.exit(0); // Stops the program after catching the hackers.
 		}
 	}
