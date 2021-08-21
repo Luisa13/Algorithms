@@ -5,19 +5,19 @@ And if you feel hungry of more challenges, exercises and practices, you can alwa
 
 Topic | Description | Link to my solution
 --------------- | --------------- | ---------------
-Arrays                | Arrays and Strings practice                 |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Arrays)
-Linked List           | Problems based on linked list structure     |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/LinkedList)
-Stacks and Queues     | Stacks and queues based solutions             |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Stacks)
-Trees and Graphs      | Exercise to cover trees and graphs structures and the many ways of traverse it |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Trees)
+Arrays                | Arrays and Strings practice.                |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Arrays)
+Linked List           | Problems based on linked list structure.    |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/LinkedList)
+Stacks and Queues     | Stacks and queues based solutions.             |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Stacks)
+Trees and Graphs      | Exercise to cover trees and graphs structures and the many ways of traverse it. |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Trees)
 Hash                  |              |[]()
-OO Design             | Practicing around the desing of a system with object-oriented principles |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/OODesign)
-Recursion & Dynamic Programming  | Recursion type of problems  |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Recursion)
+OO Design             | Practicing around the desing of a system with object-oriented principles. |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/OODesign)
+Recursion & Dynamic Programming  | Recursion type of problems.  |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Recursion)
 System Design         |              |[]()
-Sorting and searching | Exercises based on popular searching and sorting algorithms with a twist |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/SortingSearching)
+Sorting and searching | Exercises based on popular searching and sorting algorithms with a twist. |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/SortingSearching)
 General C++           |              |[]()
-General Java          | Some exercises to practices Java core concepts |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/JavaCore)
+General Java          | Some exercises to practices Java core concepts. |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/JavaCore)
 DataBase              |              |[]()
-Threads               | Basics about concurrency   |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Threads)
+Threads               | Basics about concurrency and [exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Threads/MultiThreading) from the course Multithreading from Udemy.  |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Threads)
 Moderate              |              |[]()
 Hard                  |              |[]()
 
