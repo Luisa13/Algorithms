@@ -3,11 +3,14 @@ package MultiThreading.optimization;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 
 import javax.imageio.ImageIO;
 
 /**
- * 
+ * Processes an image in order to change the color of a specific shade into another one.
+ * In this case, we have replaced the gray color spectrum (white flowers in the picture) 
+ * for the violet one.
  * 
  * This exercise has been extracted from the course Java Multithreading,
  * Concurrency & Performance Optimization, instructed by Michael Progrebinsky
@@ -16,13 +19,13 @@ import javax.imageio.ImageIO;
  * @author luisa
  */
 public class ImageProcessor {
-	private static final String SOURCE_IMG = "Algorithms/resources/img/";
-	private static final String OUTPUT_IMG = "Algorithms/resources/output/violetFlowerImageProcessing.jpg";
+	private static final String SOURCE_IMG = "./resources/img/many-flowers.jpg";
+	private static final String OUTPUT_IMG = "./resources/output/violetFlowerImageProcessing.jpg";
 
 	public static void main(String[] args) {
 		try {
 			BufferedImage originalImage = ImageIO.read(new File(SOURCE_IMG));
-			BufferedImage resultImage = new BufferedImage(originalImage.getHeight(), originalImage.getWidth(),
+			BufferedImage resultImage = new BufferedImage(originalImage.getWidth(), originalImage.getHeight(),
 					BufferedImage.TYPE_INT_RGB);
 			
 			recolorImage(originalImage, resultImage);
@@ -31,8 +34,10 @@ public class ImageProcessor {
 			ImageIO.write(resultImage, "jpg", outputImage);
 			
 		} catch (IOException e) {
-			System.out.print("An error took place trying to open the image: " + e.getMessage());
+			System.out.println("An error took place trying to open the image: " + e.getMessage());
 		}
+		
+		System.out.print("The process has finished! The image is at: " + OUTPUT_IMG);
 
 	}
 	
@@ -59,9 +64,8 @@ public class ImageProcessor {
 	 * @param int 			Width of the image
 	 * */
 	public static void recolorImage(BufferedImage imageIn, BufferedImage imageOut, int xTop, int yTop, int height, int width) {
-
-		for(int x = xTop; x < yTop + width && x < imageIn.getWidth(); x++) {
-			for(int y = yTop; y < xTop + height && y < imageIn.getHeight(); y++) {
+		for(int x = xTop; x < xTop + width && x < imageIn.getWidth() ; x++) {
+			for(int y = yTop; y < yTop + height && y < imageIn.getHeight(); y++) {
 				recolorPixel(imageIn, imageOut, x, y);
 			}
 		}
@@ -69,7 +73,7 @@ public class ImageProcessor {
 
 	/**
 	 * Changes the color of a gray shaded pixel to violet. For that purpose, it
-	 * reduces the green value significantly.
+	 * reduces the green value significantly).
 	 * 
 	 * @param BufferedImage Original image to be changed.
 	 * 
@@ -99,7 +103,11 @@ public class ImageProcessor {
 	}
 
 	/**
+	 * Sets the RGB value to a given pixels.
 	 * 
+	 * @param int X coordinate
+	 * @param int Y coordinate
+	 * @param int RGB value to set
 	 * */
 	public static void setRGB(BufferedImage image, int x, int y, int rgb) {
 		image.getRaster().setDataElements(x, y, image.getColorModel().getDataElements(rgb, null));
