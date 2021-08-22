@@ -3,14 +3,22 @@ package MultiThreading.optimization;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Paths;
+import java.sql.Timestamp;
+import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.imageio.ImageIO;
 
 /**
  * Processes an image in order to change the color of a specific shade into another one.
  * In this case, we have replaced the gray color spectrum (white flowers in the picture) 
- * for the violet one.
+ * for the violet one. The example consists in two parts: the first one corresponds to the 
+ * method recolorImageSingleThread which is the set up for the initial problem as a single
+ * thread solution. The second one, is a multithread solution by partitioning the image into 
+ * as many pieces as we have threads. 
+ * It can be observed the amount of time a single thread approach takes in comparison with the 
+ * multithread solution showing that the last one, is more efficient.
  * 
  * This exercise has been extracted from the course Java Multithreading,
  * Concurrency & Performance Optimization, instructed by Michael Progrebinsky
@@ -28,7 +36,13 @@ public class ImageProcessor {
 			BufferedImage resultImage = new BufferedImage(originalImage.getWidth(), originalImage.getHeight(),
 					BufferedImage.TYPE_INT_RGB);
 			
-			recolorImage(originalImage, resultImage);
+			Timestamp start = new Timestamp(System.currentTimeMillis());
+			//recolorImageSingleThread(originalImage, resultImage);
+			recolorImageMultiThread(originalImage, resultImage, 4);
+			Timestamp end = new Timestamp(System.currentTimeMillis());
+			System.out.println("Total amount of time: " + (end.getTime() - start.getTime()) );
+			
+			
 			
 			File outputImage = new File(OUTPUT_IMG);
 			ImageIO.write(resultImage, "jpg", outputImage);
@@ -40,6 +54,49 @@ public class ImageProcessor {
 		System.out.print("The process has finished! The image is at: " + OUTPUT_IMG);
 
 	}
+
+	
+	/**
+	 * Changes the color of all the gray shaded pixels of an image to violet, following 
+	 * a multithread approach. To do so, it breaks down the image and run each chunk by 
+	 * a single thread.  
+	 * 
+	 * @param BufferedImage Original image
+	 * @param BufferedImage Resulting image
+	 * @param int 			Number of threads
+	 * */
+	public static void recolorImageMultiThread(BufferedImage imageIn, BufferedImage imageOut, int numThreads)  {
+		if(numThreads <= 0) {
+			System.out.println("Number of threads must be above 0");
+			return;
+		}
+		
+		List<Thread> threads = new ArrayList<Thread>();
+		int width = imageIn.getWidth();
+		int height = imageIn.getHeight() / numThreads;
+		
+		for(int i = 0; i < numThreads; i++) {
+			final int threadMultiplier = i;
+			Thread thread = new Thread(()  ->{
+				int xTop = 0;
+				int yTop = height * threadMultiplier;
+				recolorImage(imageIn, imageOut, xTop, yTop, height, width);
+			});
+			threads.add(thread);
+		}
+		
+		for(Thread thread: threads) {
+			thread.start();
+		}
+		
+		for(Thread thread: threads) {
+			try {
+				thread.join();
+			}catch(InterruptedException ex) {
+				System.out.println("Error at joining thread " + thread.getId() + " : " + ex.getMessage());
+			}
+		}
+	} 
 	
 	
 	/**
@@ -49,7 +106,7 @@ public class ImageProcessor {
 	 * @param BufferedImage Original image
 	 * @param BufferedImage Resulting image
 	 * */
-	public static void recolorImage(BufferedImage imageIn, BufferedImage imageOut) {
+	public static void recolorImageSingleThread(BufferedImage imageIn, BufferedImage imageOut) {
 		recolorImage(imageIn, imageOut, 0, 0, imageIn.getHeight(), imageIn.getWidth());
 	}
 	
@@ -150,6 +207,7 @@ public class ImageProcessor {
 
 	/**
 	 * Get the red value from a rgb value
+	 * 
 	 * @param int RGB value
 	 * @return int
 	 * */
@@ -159,6 +217,7 @@ public class ImageProcessor {
 	
 	/**
 	 * Get the red value from a blue value
+	 * 
 	 * @param int RGB value
 	 * @return int
 	 * */
@@ -168,6 +227,7 @@ public class ImageProcessor {
 	
 	/**
 	 * Get the red value from a green value
+	 * 
 	 * @param int RGB value
 	 * @return int
 	 * */
