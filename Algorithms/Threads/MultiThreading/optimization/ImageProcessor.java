@@ -216,7 +216,7 @@ public class ImageProcessor {
 	}
 	
 	/**
-	 * Get the red value from a blue value
+	 * Get the blue value from a rgb value
 	 * 
 	 * @param int RGB value
 	 * @return int
@@ -226,7 +226,7 @@ public class ImageProcessor {
 	}
 	
 	/**
-	 * Get the red value from a green value
+	 * Get the green value from a rgb value
 	 * 
 	 * @param int RGB value
 	 * @return int
