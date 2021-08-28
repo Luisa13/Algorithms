@@ -73,9 +73,7 @@ public class Book {
 	}
 	
 	public void openAt(int numPage) {
-		for(){
-			
-		}
+	
 	}
 
 }

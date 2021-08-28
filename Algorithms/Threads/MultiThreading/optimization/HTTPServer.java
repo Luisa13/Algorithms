@@ -14,7 +14,6 @@ import com.sun.net.httpserver.HttpServer;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-import javax.imageio.ImageIO;
 
 /**
  * Simulates a HTTP server where each request is addressed by a thread pool. The server will load 

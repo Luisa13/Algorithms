@@ -4,6 +4,16 @@ import java.util.Random;
 
 import MultiThreading.concurrency.AtomicOperations.Metrics;
 
+/**
+ * This exercise simulates an analytics which will be used to keep the track o the minimum and maximum of 
+ * a business focused on stock prices.
+ * 
+ * </br></br>
+ * This exercise has been extracted from the course Java Multithreading, Concurrency & Performance 
+ * Optimization, instructed by Michael Progrebinsky through Udemy, under MIT license.
+ * 
+ * @author luisa
+ * */
 public class MinMaxMetrics {
 	public static void main(String[] args) {
 		MinMax metrics = new MinMax();
@@ -16,7 +26,9 @@ public class MinMaxMetrics {
 		printer.start();
 	}
 	
-	
+	/**
+	 * Prints the metrics in a single thread.
+	 * */
 	public static class PrintMetrics extends Thread{
 		MinMax metrics = new MinMax();
 		public PrintMetrics(MinMax metrics){
@@ -39,6 +51,9 @@ public class MinMaxMetrics {
 		}
 	}
 	
+	/**
+	 * Keeps track of the maximum and minimum of the stock in a daily basis.
+	 * */
 	public static class TradingStock extends Thread{
 		private Random random = new Random();
 		private MinMax minMaxMetrics;
@@ -60,6 +75,10 @@ public class MinMaxMetrics {
 		}
 	}
 	
+	/**
+	 * Get the performance (storing min and max values) of a particular business
+	 * 
+	 * */
 	public static class MinMax{
 		private volatile long min = 0;
 		private volatile long max = 0;
@@ -69,15 +88,24 @@ public class MinMaxMetrics {
 			this.max = Long.MAX_VALUE;
 		}
 		
+		/**
+		 * Adds a new sample to the metrics
+		 * */
 		public synchronized void addSample(long newSample) {
 			this.min = Math.min(newSample, this.min);
 			this.max = Math.max(newSample, this.max);
 		}
 		
+		/**
+		 * Gets the minimum stored value
+		 * */
 		public long getMin() {
 			return this.min;
 		}
 		
+		/**
+		 * Gets the maximum stored value
+		 * */
 		public long getMax() {
 			return this.max;
 		}
