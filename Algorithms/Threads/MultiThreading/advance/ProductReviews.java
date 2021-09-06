@@ -13,7 +13,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
  * A database keeps the product with an associated list of reviews of such product. The 
- * ReentrantReadWrite lock is used to prevent race conditions on the operations.
+ * proper ReentrantReadWrite lock is used to prevent race conditions on the operations.
  * 
  * </br>
  * </br>

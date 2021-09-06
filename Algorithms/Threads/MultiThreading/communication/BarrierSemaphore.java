@@ -38,7 +38,8 @@ public class BarrierSemaphore {
 
 	/**
 	 * Guarantees the order of operation when acquiring a resource. To do so, semaphore is initialized
-	 * with 0 value to make sure every thread that tries to acquire the resource gets blocked.
+	 * with 0 value to make sure every thread that tries to acquire the resource gets blocked. It keeps
+	 * all the thread that access it, and release them all at once when the last one arrives.
 	 * 
 	 * */
 	 private static class Barrier {
@@ -76,6 +77,10 @@ public class BarrierSemaphore {
 
 	}
 
+	 /**
+	  * Coordinates all the threads that performs a task with the help of a barrier 
+	  * class
+	  * */
 	public static class CoordinatedWorkRunner implements Runnable {
 
 		private Barrier barrier;
