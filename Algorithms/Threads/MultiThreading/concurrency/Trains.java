@@ -4,10 +4,10 @@ import java.util.Random;
 
 /**
  * Simulates a situation where two trains take two different roads belonging to the same 
- * intersection. Each train is running in a different thread and takes a different road
- * of the same intersection, however, in the first version of this exercise, the situation
- * leads to a circular wait. To untie such deadlock, the locks must be taken in the same 
- * order between the threads.
+ * intersection. Each train is running in a different thread, however in the first version 
+ * of this exercise, the situation leads to a circular wait. To untie such deadlock, the 
+ * locks must be taken in the same order between the threads which happens in the second 
+ * version.
  * 
  * </br>
  * </br>
@@ -91,7 +91,7 @@ public class Trains {
 		private Object roadA = new Object();
 		private Object roadB = new Object();
 
-		// Uncomment for circular wait deadlock display
+		// 1 VERSION: Uncomment for circular wait deadlock display
 		/* 
 		 * 
 		 * private void takeRoadA() { synchronized (roadA) {
@@ -104,7 +104,7 @@ public class Trains {
 		 * System.out.println("An error happened taking the road A"); } } } }
 		 */
 
-		// Uncomment for circular wait prevention
+		// 2 VERSION: Uncomment for circular wait prevention
 		
 		private void takeRoadA() {
 			synchronized (roadB) {
