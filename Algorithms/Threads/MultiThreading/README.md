@@ -43,4 +43,10 @@ Running tasks in parallel.
 - ReentrantReadWrite Lock
 
 #### Communication
+- Producer-Consumer technique
 - Semaphore: Restricts the number of allowed users per critical section.
+- Internal method of each object:
+  - wait() : The current thread waint until another thread wakes it up. In the wait state is not consuming any CPU.
+  - notify(): Wakes ap a **single** thread waiting on that object.
+  - notifyAll(): Wakes up all thread waiting on that object.
+
