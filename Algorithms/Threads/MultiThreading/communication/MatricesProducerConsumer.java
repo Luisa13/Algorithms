@@ -18,7 +18,7 @@ import java.util.StringJoiner;
  * In the first version of this algorithm, it has been implemented without
  * Back-Pressure, but after increase the size of the matrices to multiply, the
  * application eventually crush and runs out of memory. Hereby it is needed to
- * create a Back-Pressure approach.
+ * create a Back-Pressure approach to prevent it from OutOfMemoryException.
  * 
  * </br>
  * </br>
@@ -177,7 +177,7 @@ public class MatricesProducerConsumer {
 	 * 
 	 */
 	public static class ThreadSafeQueue {
-		private static final int CAPACITY = 5;
+		private static final int CAPACITY = 5; // VERSION 2
 		private Queue<MatrixPair> queue = new LinkedList<MatrixPair>();
 		private boolean isEmpty = true;
 		private boolean isTerminate = false;
@@ -187,6 +187,7 @@ public class MatricesProducerConsumer {
 		 * 
 		 */
 		public synchronized void add(MatrixPair matrixPair) {
+			//VERSION 2
 			while (this.queue.size() == CAPACITY) {
 				try {
 					wait();
@@ -221,6 +222,7 @@ public class MatricesProducerConsumer {
 
 			System.out.println("Queue size is: " + this.queue.size());
 			matricesPair = this.queue.remove();
+			// VERSION 2
 			if (queue.size() == CAPACITY - 1) {
 				notifyAll();
 			}
@@ -231,7 +233,7 @@ public class MatricesProducerConsumer {
 		/**
 		 * Lets the consumer know there is nothing to consume.
 		 */
-		public void terminate() {
+		public synchronized void terminate() {
 			this.isTerminate = true;
 			this.notify();
 		}
