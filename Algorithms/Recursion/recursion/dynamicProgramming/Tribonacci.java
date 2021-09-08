@@ -1,4 +1,4 @@
-package dp.exercises;
+package recursion.dynamicProgramming;
 
 /**
  * Fibonacci sequence with a twist. The nth element is the result of the sum of the last three numbers in the sequence 
