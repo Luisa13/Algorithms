@@ -79,7 +79,8 @@ public class ECommerce {
 		}
 	}*/
 	
-	// ATOMIC INTEGER VERSION
+	// ATOMIC INTEGER VERSION - Uncomment to get into the future
+	//
 	public static class Inventory{
 		private AtomicInteger items = new AtomicInteger(0);
 		
