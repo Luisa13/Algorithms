@@ -7,11 +7,11 @@ Creation and coordination concepts.
 - Thread interruptions: Handled by InterruptedException and interrupts a thread prematurely whatever is its state.
 
 #### Optimization
-- In how many pieces shall we break a task down to achieve optimal concurrency?
-- ThreadPool technique
+- In how many pieces shall we break a task down to achieve optimal concurrency? Can we breack any task into subtasks? Does this approach come for free?
+- ThreadPool technique (HTTP server implementation)
 - Improve the throughput in an application:
-Breaking the into subtasks or
-Running tasks in parallel.
+   - Breaking the into subtasks.
+   - Running tasks in parallel.
 
 #### Data Sharing
 - Stack memory: Memory region where all methods are executed
@@ -31,16 +31,32 @@ Running tasks in parallel.
 - Race conditions and data races
 
 #### Locking Strategies & Deadlocks
--Coarse grain strategy vs Fain grain strategy
+- Coarse grain strategy vs Fain grain strategy
 - Deadlock: When every thread wants to move forward but cannot bvecasue they are actually waiting for another one.
   - Mutual exclusion: Only one thread can have exclusive access to a resource.
   - Hold and wait: At least one thread is holding a resoource and waiting for another resource.
   - Non-preventive allocation
   - Circular wait (Solution: Enforce a strict order in lock acquisition).
   
-- Reentrant lock
+- Reentrant lock 
+   - Verbose, complex and flexible.
 - Reentrant tryLock
+   - Sensitive to interruptions good choice for watchdog.
 - ReentrantReadWrite Lock
+   - Ideal choice for multiple readers attempt scenario.
+
+
+Situation| ReentrantLock | tryLock | ReentrantReadWrite
+---------|---------------|---------|----------------------
+Thread accessing a shared resource| block thread | returns false | Depends on the type of the operation (w/r)
+Many threads accessing a write method| just one | just one | just one
+Many threads accessing a read method| just one,| just one| Many threads since it's guaranteed with read lock
 
 #### Communication
+- Producer-Consumer technique
 - Semaphore: Restricts the number of allowed users per critical section.
+- Internal method of each object:
+  - wait() : The current thread waint until another thread wakes it up. In the wait state is not consuming any CPU.
+  - notify(): Wakes up a **single** thread waiting on that object.
+  - notifyAll(): Wakes up all the threads waiting on that object.
+
