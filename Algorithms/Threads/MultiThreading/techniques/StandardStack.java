@@ -8,8 +8,13 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.locks.LockSupport;
 
 
+
+
 /**
- * Implements a standard and thread safe stack with locks
+ * Implements a standard and thread safe stack with locks. The first version follows an approach
+ * based on locks and synchronized methods. The second version is implemented avoiding the use of
+ * locks. The second one, becomes more efficient, since is capable to compute more operations in 
+ * the same amount of time.
  * 
  * </br>
  * </br>
@@ -25,14 +30,14 @@ public class StandardStack {
 	public static final int POP_THREADS = 2;
 	
 	public static void main(String[] args) throws InterruptedException {
-		// Stack<Integer> stack = new Stack<>();
-		FreeLockStack<Integer> stack = new FreeLockStack<>();
+		// Stack<Integer> stack = new Stack<>();  // Uncomment to see a standard thread safe Stack in action
+		FreeLockStack<Integer> stack = new FreeLockStack<>();   //Uncomment to see a standard-thread-safe-free-lock Stack in action
 		Random random = new Random();
 		for(int i = 0; i<1000; i++) 
 			stack.push(random.nextInt());
 		
+		// Set two threads to perform push operations
 		List<Thread> threads = new ArrayList<>();
-		System.out.println("2");
 		for(int i = 0; i<PUSH_THREADS; i ++) {
 			Thread thread = new Thread(()->{
 				while(true) 
@@ -42,6 +47,8 @@ public class StandardStack {
 			thread.setDaemon(true);
 			threads.add(thread);
 		}
+		
+		// Set two threads to perform pop operations
 		for(int i = 0; i<POP_THREADS; i ++) {
 			Thread thread = new Thread(()->{
 				while(true) 
@@ -59,7 +66,7 @@ public class StandardStack {
 	}
 	/**
 	 * Implement a thread safe stack without using locks.
-	 * 
+	 * SECOND VERSION
 	 * */
 	public static class FreeLockStack<T>{
 		private AtomicReference<StackNode<T>> head = new AtomicReference<>();
@@ -107,6 +114,7 @@ public class StandardStack {
 
 	/**
 	 * Implements a standard and thread safe stack with locks
+	 * FIRST VERSION
 	 * */
 	public static class Stack<T>{
 		private StackNode<T> head;
