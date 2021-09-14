@@ -11,7 +11,7 @@ Stacks and Queues     | Stacks and queues based solutions.             |[exercis
 Trees and Graphs      | Exercise to cover trees and graphs structures and the many ways of traverse it. |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Trees)
 Hash                  |              |[]()
 OO Design             | Practicing around the desing of a system with object-oriented principles. |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/OODesign)
-Recursion & Dynamic Programming  | Recursion type of problems.  |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Recursion)
+Recursion & Dynamic Programming  | Solving recursion problems from different approaches.  |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Recursion)
 System Design         |              |[]()
 Sorting and searching | Exercises based on popular searching and sorting algorithms with a twist. |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/SortingSearching)
 General C++           |              |[]()
