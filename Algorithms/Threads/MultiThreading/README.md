@@ -27,7 +27,7 @@ Creation and coordination concepts.
 #### Concurrency
 - Monitor: Synchronized methods that prevent any other thread access **any** of them until it's done. It means, this approach blocks the **object** for the thread that is currently executing it.
 - Lock: Dedicated synchronized piece of code. The less code is in the synchronized block, the more code is running concurrently.
-- Atomic operations and volatile keyword
+- Atomic operations and *volatile* keyword
 - Race conditions and data races
 
 #### Locking Strategies & Deadlocks
@@ -37,13 +37,10 @@ Creation and coordination concepts.
   - Hold and wait: At least one thread is holding a resoource and waiting for another resource.
   - Non-preventive allocation
   - Circular wait (Solution: Enforce a strict order in lock acquisition).
-  
-- Reentrant lock 
-   - Verbose, complex and flexible.
-- Reentrant tryLock
-   - Sensitive to interruptions good choice for watchdog.
-- ReentrantReadWrite Lock
-   - Ideal choice for multiple readers attempt scenario.
+  - Strategies:
+      - Reentrant Lock: Verbose, complex and flexible.
+      - Reentrant tryLock: Sensitive to interruptions good choice for watchdog.
+      - ReentrantReadWrite Lock: Ideal choice for multiple readers attempt scenario.
 
 
 Situation| ReentrantLock | tryLock | ReentrantReadWrite
@@ -60,3 +57,11 @@ Many threads accessing a read method| just one,| just one| Many threads since it
   - notify(): Wakes up a **single** thread waiting on that object.
   - notifyAll(): Wakes up all the threads waiting on that object.
 
+#### Communication
+- Drawbacks of locks
+   - As they increase, so do the chances to get deadlocks.
+   - Slow critical section
+   - Cycle waits (i.e. priority inversion).
+- Introduction to _AtomicInteger_ : Only we need atomic operations. The [techniques](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Threads/MultiThreading/techniques) package implements two exercises using this approach.
+- Even if each individual operation on each variable is atomic, the aggregate operation is not, where can be seen in the [product reviews exercise](https://github.com/Luisa13/Algorithms/blob/main/Algorithms/Threads/MultiThreading/advance/ProductReviews.java).
+   
