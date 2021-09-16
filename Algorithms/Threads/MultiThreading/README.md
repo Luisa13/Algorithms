@@ -1,19 +1,19 @@
 ## Java Multithreading, Concurrency & Performance Optimization Course
-#### Fundamental
+### Fundamental
 Creation and coordination concepts.
 - Daemon threads: Threads that run in the background.
 - Join method: Allows one thread to wait until another thread completes its execution.
 - Sleep method: Tells the operating system to not schedule the thread until the specified time passes.
 - Thread interruptions: Handled by InterruptedException and interrupts a thread prematurely whatever is its state.
 
-#### Optimization
+### Optimization
 - In how many pieces shall we break a task down to achieve optimal concurrency? Can we breack any task into subtasks? Does this approach come for free?
 - ThreadPool technique (HTTP server implementation)
 - Improve the throughput in an application:
    - Breaking the into subtasks.
    - Running tasks in parallel.
 
-#### Data Sharing
+### Data Sharing
 - Stack memory: Memory region where all methods are executed
    - All vars belong to the thread executing on that stack.
    - The thread is statically allocated when it's created.
@@ -24,13 +24,13 @@ Creation and coordination concepts.
   - Objects stay as long as we have a reference to them
   - Statics vars stay forever (life cycle of the process)
 
-#### Concurrency
+### Concurrency
 - Monitor: Synchronized methods that prevent any other thread access **any** of them until it's done. It means, this approach blocks the **object** for the thread that is currently executing it.
 - Lock: Dedicated synchronized piece of code. The less code is in the synchronized block, the more code is running concurrently.
 - Atomic operations and *volatile* keyword
 - Race conditions and data races
 
-#### Locking Strategies & Deadlocks
+### Locking Strategies & Deadlocks
 - Coarse grain strategy vs Fain grain strategy
 - Deadlock: When every thread wants to move forward but cannot bvecasue they are actually waiting for another one.
   - Mutual exclusion: Only one thread can have exclusive access to a resource.
@@ -49,7 +49,7 @@ Thread accessing a shared resource| block thread | returns false | Depends on th
 Many threads accessing a write method| just one | just one | just one
 Many threads accessing a read method| just one,| just one| Many threads since it's guaranteed with read lock
 
-#### Communication
+### Communication
 - Producer-Consumer technique
 - Semaphore: Restricts the number of allowed users per critical section.
 - Internal method of each object:
@@ -57,7 +57,7 @@ Many threads accessing a read method| just one,| just one| Many threads since it
   - notify(): Wakes up a **single** thread waiting on that object.
   - notifyAll(): Wakes up all the threads waiting on that object.
 
-#### Communication
+### Communication
 - Drawbacks of locks
    - As they increase, so do the chances to get deadlocks.
    - Slow critical section
