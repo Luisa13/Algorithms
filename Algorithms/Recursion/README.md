@@ -8,6 +8,7 @@ Some types of problems can be tacked with backtracking:
 - Enumeration problems: Searching for **all possibles** solutions.
 
 However, normaly is not the best solution, as the algorithm runs exponentially in both, time and space. 
+
 [Backtracking exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Recursion/recursion/exercises)
 
 ## Dynamic Programming
