@@ -15,7 +15,7 @@ Recursion & Dynamic Programming  | Solving recursion problems from different app
 System Design         |              |[]()
 Sorting and searching | Exercises based on popular searching and sorting algorithms with a twist. |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/SortingSearching)
 General C++           |              |[]()
-General Java          | Some exercises to practices Java core concepts. |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/JavaCore)
+General Java          | Some exercises to practice Java core concepts. |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/JavaCore)
 DataBase              |              |[]()
 Threads               | Basics about concurrency and [exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Threads/MultiThreading) from the course Multithreading from Udemy.  |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Threads)
 Moderate              |              |[]()
