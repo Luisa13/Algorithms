@@ -8,8 +8,8 @@ Topic | Description | Link to my solution
 Arrays                | Arrays and Strings practice.                |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Arrays)
 Linked List           | Problems based on linked list structure.    |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/LinkedList)
 Stacks and Queues     | Stacks and queues based solutions.             |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Stacks)
-Trees and Graphs      | Exercise to cover trees and graphs structures and the many ways of traverse it. |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Trees)
-Graphs II             | Just focused on graphs |
+Trees and Graphs      | Covers trees and graphs structures and the different ways to traverse them. |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Trees)
+Graphs II             | More exercises just focused on graphs |
 Hash                  |              |[]()
 OO Design             | Practicing around the desing of a system with object-oriented principles. |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/OODesign)
 Recursion & Dynamic Programming  | Solving recursion problems from different approaches.  |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Recursion)
