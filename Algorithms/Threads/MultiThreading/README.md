@@ -65,3 +65,8 @@ Many threads accessing a read method| just one,| just one| Many threads since it
 - Introduction to _AtomicInteger_ : Only we need atomic operations. The [techniques](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Threads/MultiThreading/techniques) package implements two exercises using this approach.
 - Even if each individual operation on each variable is atomic, the aggregate operation is not, where can be seen in the [product reviews exercise](https://github.com/Luisa13/Algorithms/blob/main/Algorithms/Threads/MultiThreading/advance/ProductReviews.java).
    
+
+
+OTHERS REFERENCES:
+- [Difference between atomic and volatile](https://medium.com/javarevisited/difference-between-atomic-volatile-and-synchronized-in-java-fa3c9d445828)
+- [Synchronization in Java](https://levelup.gitconnected.com/synchronization-in-java-all-you-need-to-know-7bd27219ce10)
