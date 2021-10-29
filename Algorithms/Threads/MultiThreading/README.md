@@ -31,10 +31,10 @@ Creation and coordination concepts.
 - Race conditions and data races
 
 ### Locking Strategies & Deadlocks
-- Coarse grain strategy vs Fain grain strategy
-- Deadlock: When every thread wants to move forward but cannot bvecasue they are actually waiting for another one.
+- _Coarse grain_ strategy vs _Fain grain_ strategy
+- Deadlock: When every thread wants to move forward but cannot becasue they are actually waiting for another one.
   - Mutual exclusion: Only one thread can have exclusive access to a resource.
-  - Hold and wait: At least one thread is holding a resoource and waiting for another resource.
+  - Hold & wait: At least one thread is holding a resource and waiting for another resource.
   - Non-preventive allocation
   - Circular wait (Solution: Enforce a strict order in lock acquisition).
   - Strategies:
