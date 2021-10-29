@@ -10,7 +10,7 @@ Creation and coordination concepts.
 - In how many pieces shall we break a task down to achieve optimal concurrency? Can we breack any task into subtasks? Does this approach come for free?
 - ThreadPool technique (HTTP server implementation)
 - Improve the throughput in an application:
-   - Breaking the into subtasks.
+   - Breaking it into subtasks.
    - Running tasks in parallel.
 
 ### Data Sharing
