@@ -13,5 +13,5 @@ Some topic covered:
 
 
 REFERENCES:
-- (Full Course Graphs for Technical Inteviews)[https://www.youtube.com/watch?v=tWVWeAqZ0WU&t=694s]
-- (DFS implementation)[https://favtutor.com/blogs/depth-first-search-java]
+- [Full Course Graphs for Technical Inteviews](https://www.youtube.com/watch?v=tWVWeAqZ0WU&t=694s)
+- [DFS implementation](https://favtutor.com/blogs/depth-first-search-java)
