@@ -62,8 +62,9 @@ Creation and coordination concepts.
       - Reentrant tryLock: Sensitive to interruptions good choice for watchdog.
       - ReentrantReadWrite Lock: Ideal choice for multiple readers attempt scenario.
       
-  - [X] Exercise: [Product Review Service](https://github.com/Luisa13/Algorithms/blob/main/Algorithms/Threads/MultiThreading/advance/ProductReviews.java)
   - [X] Example (Reentrant ReadWrite Lock and Database): [Item Inventory](https://github.com/Luisa13/Algorithms/blob/main/Algorithms/Threads/MultiThreading/advance/ItemInventory.java)
+  - [X] Exercise: [Product Review Service](https://github.com/Luisa13/Algorithms/blob/main/Algorithms/Threads/MultiThreading/advance/ProductReviews.java)
+  
 
 Situation| ReentrantLock | tryLock | ReentrantReadWrite
 ---------|---------------|---------|----------------------
@@ -73,6 +74,7 @@ Many threads accessing a read method| just one,| just one| Many threads since it
 
 ## 8. InterThread Communication
 - Producer-Consumer technique
+- Learn the [difference between](https://stackoverflow.com/questions/2332765/what-is-the-difference-between-lock-mutex-and-semaphore?noredirect=1&lq=1) lock , mutex and semaphore
 - Semaphore: Restricts the number of allowed users per critical section.
 - Internal method of each object:
   - wait() : The current thread waint until another thread wakes it up. In the wait state is not consuming any CPU.
