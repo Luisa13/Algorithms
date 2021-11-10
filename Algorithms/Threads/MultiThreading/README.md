@@ -7,7 +7,9 @@ Designed and delivered by _Michael Pogrebinsky_
 - Motivation and Operating System fundamental
 
 ## 2. Fundamental
-- Thread Creation
+- Thread Creation:
+  - Extends Thread class
+  - Implement Runnable and pass it to constructor of thread class
 - [X] Exercise: [MultiExecutor](https://github.com/Luisa13/Algorithms/blob/main/Algorithms/Threads/MultiThreading/fundamentals/MultiExecutor.java)
 
 ## 3. Thread Coordination 
@@ -43,7 +45,8 @@ Creation and coordination concepts.
 ## 6. Concurrency
 - Monitor: Synchronized methods that prevent any other thread access **any** of them until it's done. It means, this approach blocks the **object** for the thread that is currently executing it.
 - Lock: Dedicated synchronized piece of code. The less code is in the synchronized block, the more code is running concurrently.
-- Atomic operations and *volatile* keyword
+- Atomic operations and *volatile* keyword. 
+     - **Volatile**: Set shared variable to volatile to avoid caching between threads and guarantees that any thread will read the most recent written values.
 - Race conditions and data races
 - [X] Exercise: [Min Max metric](https://github.com/Luisa13/Algorithms/blob/main/Algorithms/Threads/MultiThreading/concurrency/MinMaxMetrics.java)
 - [X] Exercise: [Trains intersection](https://github.com/Luisa13/Algorithms/blob/main/Algorithms/Threads/MultiThreading/concurrency/Trains.java)
