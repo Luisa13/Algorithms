@@ -4,12 +4,13 @@ public class App {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		/*Animal littleBeing = new Animal();
-		littleBeing.foo();
-		littleBeing = new Dog();
-		littleBeing.foo();*/
+		Animal animal = new Animal();
+		animal.foo();
+		Dog dog = new Dog();
+		dog.foo();
 		
-		Animal a = new Dog();
+		animal = dog;
+		animal.foo();
 		//a.foo();
 
 	}
