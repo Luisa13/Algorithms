@@ -1,4 +1,4 @@
-package recursion.exercises;
+package exercises.recursion;
 
 /**
  * Robot in a Grid: Imagine a robot sitting on the upper left corner of a grid with r rows and c columns. 

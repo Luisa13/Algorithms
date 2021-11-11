@@ -1,4 +1,4 @@
-package recursion.dynamicProgramming;
+package exercises.dynamicProgramming;
 
 
 /**

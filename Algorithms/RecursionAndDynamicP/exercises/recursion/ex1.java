@@ -1,4 +1,4 @@
-package recursion.exercises;
+package exercises.recursion;
 
 import java.util.ArrayList;
 import java.util.Arrays;

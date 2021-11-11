@@ -1,4 +1,4 @@
-package recursion.dynamicProgramming;
+package exercises.dynamicProgramming;
 
 /**
  * You are given an integer array nums. You are initially positioned at the array's first index, and each 
