@@ -107,3 +107,4 @@ OTHERS REFERENCES:
 - [Difference between atomic and volatile](https://medium.com/javarevisited/difference-between-atomic-volatile-and-synchronized-in-java-fa3c9d445828)
 - [Synchronization in Java](https://levelup.gitconnected.com/synchronization-in-java-all-you-need-to-know-7bd27219ce10)
 - [Threads in a nutshell](https://mbavatharany.medium.com/threads-in-java-part1-7f01e45a9248)
+- [Improve Java application performance (soft)](https://topdeveloperacademy.com/articles/top-3-tips-to-improve-your-java-applications-performance)
