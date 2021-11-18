@@ -9,7 +9,7 @@ Some types of problems can be tacked with backtracking:
 
 However, normaly is not the best solution, as the algorithm runs exponentially in both, time and space. 
 
-[Backtracking exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Recursion/recursion/exercises)
+[Backtracking exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/RecursionAndDynamicP/exercises/recursion)
 
 ## Dynamic Programming
 This is a technique to optimize a recursive approach by breaking it down into simpler subproblems. 
@@ -20,4 +20,4 @@ Dynamic Programming offers two main approaches to address the problem:
 
 
 
-[Dynamic Programming exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Recursion/recursion/dynamicProgramming)
+[Dynamic Programming exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/RecursionAndDynamicP/exercises/dynamicProgramming)
