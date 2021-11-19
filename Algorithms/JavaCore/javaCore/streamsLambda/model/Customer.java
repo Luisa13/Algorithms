@@ -10,6 +10,11 @@ public class Customer {
 
 	private String name;
 	private Integer tier;
+	
+	public Customer(String name, Integer tier) {
+		this.name = name;
+		this.tier = tier;
+	}
 
 	public Long getId() {
 		return id;
@@ -33,6 +38,10 @@ public class Customer {
 
 	public void setTier(Integer tier) {
 		this.tier = tier;
+	}
+	
+	public String toString() {
+		return this.name + " " + this.tier;
 	}
 
 }
