@@ -1,14 +1,14 @@
 package javaCore.streamsLambda.model;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Set;
 
-
 /**
- *  Data model.
- *  One order might have more than one product, so they hold a many-to-many relationship.
- *  
- * */
+ * Data model. One order might have more than one product, so they hold a
+ * many-to-many relationship.
+ * 
+ */
 public class Order {
 
 	private Long id;
@@ -20,7 +20,7 @@ public class Order {
 	private Customer customer;
 
 	Set<Product> products;
-	
+
 	public Order(LocalDate orderDate, LocalDate deliveryDate, String status, Set<Product> products) {
 		this.orderDate = orderDate;
 		this.deliveryDate = deliveryDate;
@@ -35,7 +35,7 @@ public class Order {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
+
 	public LocalDate getOrderDate() {
 		return orderDate;
 	}
@@ -59,11 +59,11 @@ public class Order {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	
-	public Set<Product> getProducts(){
+
+	public Set<Product> getProducts() {
 		return this.products;
 	}
-	
+
 	public void setProducts(Set<Product> products) {
 		this.products = products;
 	}
@@ -75,9 +75,14 @@ public class Order {
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
 	}
-	
+
 	public String toString() {
-		return this.orderDate + " " + this.deliveryDate + " " + this.status +": \n" + this.products;
+		String formatOrdertDate = this.orderDate.getDayOfMonth() + " " + this.orderDate.getMonth() + " "
+				+ this.orderDate.getYear();
+		String deliveryDate = this.deliveryDate.getDayOfMonth() + " " + this.deliveryDate.getMonth() + " "
+				+ this.deliveryDate.getYear();
+
+		return formatOrdertDate + " --> " + deliveryDate + ": \n" + this.products;
 	}
 
 }
