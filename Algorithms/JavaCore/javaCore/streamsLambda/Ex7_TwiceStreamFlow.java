@@ -12,12 +12,18 @@ import javaCore.streamsLambda.model.Order;
 import javaCore.streamsLambda.model.Product;
 
 /**
- * Get a list of orders which were ordered on 15-Mar-2021, log the order records to the
- * console and then return its product list.
+ * Get a list of orders which were ordered on 15-Mar-2021, log the order records
+ * to the console and then return its product list.
  * 
- * */
+ * Apart from running the stream flow twice, operation peek() allows execution
+ * of system logic as part of a stream flow. The sample solution runs peek() to
+ * write order records to the console right after data filtering, then
+ * subsequent operations such as flatMap() will be executed for the output of
+ * product records.
+ * 
+ */
 public class Ex7_TwiceStreamFlow {
-	public static final LocalDate DELIVERYDATE = LocalDate.parse("2021-03-15");
+	public static final LocalDate ORDERDATE = LocalDate.parse("2021-03-15");
 
 	public static List<Order> init() {
 
@@ -55,18 +61,15 @@ public class Ex7_TwiceStreamFlow {
 
 		return orders;
 	}
+
 	public static void main(String[] args) {
-		
-		List<Product> products = init()
-				.stream()
-				.filter(o ->o.getOrderDate().equals(DELIVERYDATE))
-				.peek(System.out::println)
-				.flatMap(o -> o.getProducts().stream())
-				.distinct()
+
+		List<Product> products = init().stream().filter(o -> o.getOrderDate().equals(ORDERDATE))
+				.peek(System.out::println).flatMap(o -> o.getProducts().stream()).distinct()
 				.collect(Collectors.toList());
-		
-		System.out.println("================");
-		
+
+		System.out.println("======== PRODUCTS ========");
+
 		products.forEach(System.out::println);
 	}
 
