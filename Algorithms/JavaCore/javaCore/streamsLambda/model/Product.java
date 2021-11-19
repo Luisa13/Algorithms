@@ -63,6 +63,6 @@ public class Product {
 	}
 	
 	public String toString() {
-		return this.name + " " + this.category + " " + this.getPrice();
+		return this.name + " " + this.category + " " + this.getPrice() + "\n";
 	}
 }

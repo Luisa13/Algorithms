@@ -20,13 +20,12 @@ public class Order {
 	private Customer customer;
 
 	Set<Product> products;
-
-	public LocalDate getOrderDate() {
-		return orderDate;
-	}
-
-	public void setOrderDate(LocalDate orderDate) {
+	
+	public Order(LocalDate orderDate, LocalDate deliveryDate, String status, Set<Product> products) {
 		this.orderDate = orderDate;
+		this.deliveryDate = deliveryDate;
+		this.status = status;
+		this.products = products;
 	}
 
 	public Long getId() {
@@ -35,6 +34,14 @@ public class Order {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+	
+	public LocalDate getOrderDate() {
+		return orderDate;
+	}
+
+	public void setOrderDate(LocalDate orderDate) {
+		this.orderDate = orderDate;
 	}
 
 	public LocalDate getDeliveryDate() {
@@ -52,6 +59,14 @@ public class Order {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	
+	public Set<Product> getProducts(){
+		return this.products;
+	}
+	
+	public void setProducts(Set<Product> products) {
+		this.products = products;
+	}
 
 	public Customer getCustomer() {
 		return customer;
@@ -59,6 +74,10 @@ public class Order {
 
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
+	}
+	
+	public String toString() {
+		return this.orderDate + " " + this.deliveryDate + " " + this.status +": \n" + this.products;
 	}
 
 }
