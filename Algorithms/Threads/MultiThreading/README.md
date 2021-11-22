@@ -1,5 +1,5 @@
 # Java Multithreading, Concurrency & Performance Optimization Course
-This course help you to build well designed & correct multithreaded applications in Java as well as gain expert-level practical knowledge of modern software architecture & low level programming using Threads. [Sylabus](https://www.udemy.com/course/java-multithreading-concurrency-performance-optimization/learn/lecture/11200012#overview)
+This course help you to build well designed & correct multithreaded applications in Java as well as gain expert-level practical knowledge of modern software architecture & low level programming using Threads. [Syllabus](https://www.udemy.com/course/java-multithreading-concurrency-performance-optimization/learn/lecture/11200012#overview)
 
 Designed and delivered by _Michael Pogrebinsky_
 
