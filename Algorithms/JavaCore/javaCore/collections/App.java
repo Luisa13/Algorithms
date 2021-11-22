@@ -2,6 +2,8 @@ package javaCore.collections;
 
 import java.util.Arrays;
 
+import javaCore.collections.model.ComparableStudent;
+
 public class App {
 
 	public static void main(String[] args) {
@@ -16,12 +18,12 @@ public class App {
 		// Objects
 		System.out.println("-----Working with objects----");
 		System.out.println("Sorting by age (int)");
-		Student[] studentList = new Student[5];
-		studentList[0] = new Student("Anna", 18, 7);
-		studentList[1] = new Student("Norman", 20, 3);
-		studentList[2] = new Student("Sean", 22, 10);
-		studentList[3] = new Student("Jolenne", 19, 5);
-		studentList[4] = new Student("Leela", 24, 7);
+		ComparableStudent[] studentList = new ComparableStudent[5];
+		studentList[0] = new ComparableStudent("Anna", 18, 7);
+		studentList[1] = new ComparableStudent("Norman", 20, 3);
+		studentList[2] = new ComparableStudent("Sean", 22, 10);
+		studentList[3] = new ComparableStudent("Jolenne", 19, 5);
+		studentList[4] = new ComparableStudent("Leela", 24, 7);
 		System.out.println("Before: " + Arrays.toString(studentList));
 		studentList = arrayCollection.sortObjects(studentList);
 		System.out.println("After: " + Arrays.toString(studentList));

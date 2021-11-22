@@ -1,18 +1,18 @@
-package javaCore.collections;
+package javaCore.collections.model;
 
 
-public class Student implements Comparable<Student>{
+public class ComparableStudent implements Comparable<ComparableStudent>{
 	private String name;
 	private int age;
 	private float grade;
 	
-	public Student() {
+	public ComparableStudent() {
 		this.name = null;
 		this.age = 0;
 		this.grade = 0;
 	}
 	
-	public Student(String name, int age, float grade) {
+	public ComparableStudent(String name, int age, float grade) {
 		this.name = name;
 		this.age = age;
 		this.grade = grade;
@@ -26,14 +26,14 @@ public class Student implements Comparable<Student>{
 		return this.grade;
 	}
 	
-	//Override toString method
+	@Override
 	public String toString() {
 		return String.format(("%s, %d, %.2f "), this.name, this.age, this.grade);
 	}
 	
 
 	@Override
-	public int compareTo(Student s) {
+	public int compareTo(ComparableStudent s) {
 		// TODO Auto-generated method stub
 		return this.age - s.age;
 	}	
