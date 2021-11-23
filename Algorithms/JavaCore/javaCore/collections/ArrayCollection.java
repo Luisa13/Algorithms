@@ -79,7 +79,7 @@ public class ArrayCollection {
 	}
 
 	/**
-	 * Sort a list of student firstly by name and then by grade.
+	 * Sort a list of student firstly by grade and then by name.
 	 * 
 	 * @param ComparableStudent[]
 	 * @return ComparableStudent[]
@@ -104,7 +104,7 @@ public class ArrayCollection {
 
 			Float grades1 = o1.getGrade();
 			Float grades2 = o2.getGrade();
-			int floatComp = grades1.compareTo(grades2);
+			int floatComp = grades2.compareTo(grades1); // Decreasing sort: o2 > o1
 
 			if (floatComp != 0) {
 				return floatComp;
