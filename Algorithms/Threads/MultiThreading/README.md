@@ -103,7 +103,7 @@ Many threads accessing a read method| just one,| just one| Many threads since it
 
 </br>
 
-CONCEPTS:
+CONCEPTS & NOTES:
 
 <a id="1">[1]</a> 
 **Thread Pooling** is a technique where we can improve the throughput by N (where N != threads != cores) by serving each task on a different thread in parallel with a fixed number of threads. If the pool is performing a blocking call means that not all the threads will be in running state, so the formula _threads = cores_ does not apply this time.
@@ -117,6 +117,9 @@ CONCEPTS:
 <a id="4">[4]</a> 
 Mutexes allows only one thread accesses to the critical section. They are more like a theoretical concept, and might be implemented using ReentrantLock or Semaphores.
 
+</br>
+
+</br>
 
 OTHERS REFERENCES:
 - [Difference between atomic and volatile](https://medium.com/javarevisited/difference-between-atomic-volatile-and-synchronized-in-java-fa3c9d445828)
