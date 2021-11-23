@@ -10,8 +10,8 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 /**
  * Implements a thread safe array list that is accessed by 6 threads to read and
  * write on it simultaneously. The threads will perform operations into the data
- * structure until no end, and when a Reader Thread tries to access the data,
- * will just print the error and keep going as usual.
+ * structure until no end, and when a Reader Thread tries to access the array
+ * when it's empty, will just print the error and keep going as usual.
  * 
  * @author luisa
  * 
