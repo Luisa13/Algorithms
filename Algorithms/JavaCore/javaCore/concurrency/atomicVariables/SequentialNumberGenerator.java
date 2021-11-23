@@ -1,4 +1,4 @@
-package javaCore.concurrent.atomicVariables;
+package javaCore.concurrency.atomicVariables;
 
 import java.util.concurrent.atomic.AtomicLong;
 

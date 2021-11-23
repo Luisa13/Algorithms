@@ -1,4 +1,4 @@
-package javaCore.concurrent.locks;
+package javaCore.concurrency.locks;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
