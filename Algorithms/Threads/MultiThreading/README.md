@@ -23,8 +23,8 @@ Creation and coordination concepts.
 
 ## 4. Performance Optimization
 - In how many pieces shall we break a task down to achieve optimal concurrency? Can we breack any task into subtasks? Does this approach come for free?
-- ThreadPool technique (HTTP server implementation)
-- Improve the throughput in an application:
+- ThreadPool technique (HTTP server implementation)[[1]](#1)
+- Improve the throughput [[2]](#2) in an application:
    - Breaking it into subtasks.
    - Running tasks in parallel.
 - [X] Example: [Image Procesing](https://github.com/Luisa13/Algorithms/blob/main/Algorithms/Threads/MultiThreading/optimization/ImageProcessor.java)
@@ -46,7 +46,7 @@ Creation and coordination concepts.
 - Monitor: Synchronized methods that prevent any other thread access **any** of them until it's done. It means, this approach blocks the **object** for the thread that is currently executing it.
 - Lock: Dedicated synchronized piece of code. The less code is in the synchronized block, the more code is running concurrently.
 - Atomic operations and *volatile* keyword. 
-     - **Volatile**: Set shared variable to volatile to avoid caching between threads and guarantees that any thread will read the most recent written values.
+     - **Volatile**[[3]](#3): Set shared variable to volatile to avoid caching between threads and guarantees that any thread will read the most recent written values.
 - Race conditions and data races
 - [X] Exercise: [Min Max metric](https://github.com/Luisa13/Algorithms/blob/main/Algorithms/Threads/MultiThreading/concurrency/MinMaxMetrics.java)
 - [X] Exercise: [Trains intersection](https://github.com/Luisa13/Algorithms/blob/main/Algorithms/Threads/MultiThreading/concurrency/Trains.java)
@@ -77,7 +77,7 @@ Many threads accessing a read method| just one,| just one| Many threads since it
 
 ## 8. InterThread Communication
 - Producer-Consumer technique
-- Learn the [difference between](https://stackoverflow.com/questions/2332765/what-is-the-difference-between-lock-mutex-and-semaphore?noredirect=1&lq=1) lock , mutex and semaphore
+- Learn the [difference between](https://stackoverflow.com/questions/2332765/what-is-the-difference-between-lock-mutex-and-semaphore?noredirect=1&lq=1) lock , mutex and semaphore [[4]](#4)
 - Semaphore: Restricts the number of allowed users per critical section.
 - Internal method of each object:
   - wait() : The current thread waint until another thread wakes it up. In the wait state is not consuming any CPU.
@@ -102,6 +102,21 @@ Many threads accessing a read method| just one,| just one| Many threads since it
 </br>
 
 </br>
+
+CONCEPTS:
+
+<a id="1">[1]</a> 
+**Thread Pooling** is a technique where we can improve the throughput by N (where N != threads != cores) by serving each task on a different thread in parallel with a fixed number of threads. If the pool is performing a blocking call means that not all the threads will be in running state, so the formula _threads = cores_ does not apply this time.
+
+<a id="2">[2]</a> 
+**Throughput**: The number of tasts completed in a given period. It can be improved by breaking the main task into subtasks and/or running tasks in parallel.
+
+<a id="3">[3]</a> 
+**Volatile**: It is a keyword used to set that a variable will not be cached between threads guaranteeing that any thread will read the most recent written values. It might be used to set an order between operations since also has the memory-effect of introducing a happens-before relationship ([more here](https://stackoverflow.com/questions/2441279/volatile-guarantees-and-out-of-order-execution))
+
+<a id="4">[4]</a> 
+Mutexes allows only one thread accesses to the critical section. They are more like a theoretical concept, and might be implemented using ReentrantLock or Semaphores.
+
 
 OTHERS REFERENCES:
 - [Difference between atomic and volatile](https://medium.com/javarevisited/difference-between-atomic-volatile-and-synchronized-in-java-fa3c9d445828)
