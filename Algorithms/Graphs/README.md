@@ -3,6 +3,7 @@ Some topic covered:
 
 - Graph basics
 - DFS & BFS: Depth first and Breadth first traversal
+- Detect Cycle
 - Has path
 - Undirected path
 - Connected components count
