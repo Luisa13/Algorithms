@@ -1,6 +1,6 @@
 package javaCore.datatype;
 
-public class SBexercises {
+public class Immutability {
 
 	/**
 	 * Checks the mutable property with Strings and StringBuilder. While 

@@ -5,6 +5,12 @@ public  class LocalVar {
 	// Global var variable is not allowed
 	//var variable = "Hello";
 	
+	public static void main(String[] args) {
+		 LocalVar.typeOf();
+		 LocalVar.whenVarInitWithAnonymous_thenGetAnonymousType();
+		
+	}
+	
 	public static void typeOf() {
 		var s = "Hey there! ";
 		// Is not allowed
