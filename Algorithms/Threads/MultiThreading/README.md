@@ -127,3 +127,4 @@ OTHERS REFERENCES:
 - [Threads in a nutshell](https://mbavatharany.medium.com/threads-in-java-part1-7f01e45a9248)
 - [Improve Java application performance (soft)](https://topdeveloperacademy.com/articles/top-3-tips-to-improve-your-java-applications-performance)
 - [Some exercises of Concurrent Programming](https://github.com/leticiamazzoportela/concurrent-programming)
+- [Exercises, lessons and a complete tutorial from Oracle](https://docs.oracle.com/javase/tutorial/essential/concurrency/index.html)
