@@ -126,3 +126,4 @@ OTHERS REFERENCES:
 - [Synchronization in Java](https://levelup.gitconnected.com/synchronization-in-java-all-you-need-to-know-7bd27219ce10)
 - [Threads in a nutshell](https://mbavatharany.medium.com/threads-in-java-part1-7f01e45a9248)
 - [Improve Java application performance (soft)](https://topdeveloperacademy.com/articles/top-3-tips-to-improve-your-java-applications-performance)
+- [Some exercises of Concurrent Programming](https://github.com/leticiamazzoportela/concurrent-programming)
