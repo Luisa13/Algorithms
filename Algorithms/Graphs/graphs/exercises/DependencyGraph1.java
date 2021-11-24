@@ -4,22 +4,24 @@ import java.util.*;
 
 
 /**
- * There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. 
- * You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you 
- * must take course bi first if you want to take course ai.
+ * There are a total of numCourses courses you have to take, labeled from 0 to
+ * numCourses - 1. You are given an array prerequisites where prerequisites[i] =
+ * [ai, bi] indicates that you must take course bi first if you want to take
+ * course ai.
  * 
- * EXAMPLE:
- * Input: numCourses = 2, prerequisites = [[A,B],[B,A]]
- * Output: false
- * Explanation: There are a total of 2 courses to take. To take course 1 you should have 
- * finished course 0, and to take course 0 you should also have finished course 1. So it is 
- * impossible
+ * EXAMPLE: Input: numCourses = 2, prerequisites = [[A,B],[B,A]] Output: false
+ * Explanation: There are a total of 2 courses to take. To take course 1 you
+ * should have finished course 0, and to take course 0 you should also have
+ * finished course 1. So it is impossible
  * 
- * This exercises is based on Khan algorithm for a directed acyclic graph (DAG) where the graph 
- * vertexes are printed in topological order. Normally it is solved with a queue, but in this 
- * case a stack is used.
+ * This exercises is based on Khan algorithm for a directed acyclic graph (DAG)
+ * where the graph vertexes are printed in topological order. It puts in
+ * practice the topological order and normally it is solved with a queue, but in
+ * this case a stack is used.
  * 
- * */
+ * 
+ * @author luisa
+ */
 public class DependencyGraph1 {
 	
 	public static boolean canFinish(int numCourses, int[][] prerequisites) {
