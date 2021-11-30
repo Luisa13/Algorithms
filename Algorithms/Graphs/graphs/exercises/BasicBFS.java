@@ -3,8 +3,10 @@ package graphs.exercises;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Queue;
 import java.util.Set;
 import java.util.Stack;
 
@@ -82,6 +84,25 @@ public class BasicBFS {
 		 * 
 		 * */
 		public void BFS(T node) {
+			if (!this.adjMatrix.containsKey(node))
+				return;
+			Queue<T> queue = new LinkedList<T>();
+			Set<T> visited = new HashSet<>();
+
+			queue.add(node);
+			while (!queue.isEmpty()) {
+				T current = queue.poll();
+				
+				if (!visited.contains(current)) {
+					System.out.print(current + ", ");
+					visited.add(current);
+					if (this.adjMatrix.containsKey(current)) {
+						List<T> children = this.adjMatrix.get(current);
+						for (T child : children)
+							queue.add(child);
+					}
+				}
+			}
 
 		}
 	}
@@ -93,7 +114,11 @@ public class BasicBFS {
 		graph.addEdge(2, 3);
 		graph.addEdge(3, 4);
 		graph.addEdge(4, 0, 1, 5);
-
+		
+		System.out.println("Traversing in DFS...");
 		graph.DFS(0);
+		
+		System.out.println("\nTraversing in BFS...");
+		graph.BFS(0);
 	}
 }
