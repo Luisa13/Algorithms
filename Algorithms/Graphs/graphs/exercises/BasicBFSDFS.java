@@ -11,11 +11,11 @@ import java.util.Set;
 import java.util.Stack;
 
 /**
- * Traverse a graph in BFS way.
+ * Traverse a graph in BFS and DFS way.
  * 
  * @author luisa
  */
-public class BasicBFS {
+public class BasicBFSDFS {
 
 	public static class Graph<T> {
 		private Map<T, List<T>> adjMatrix;
