@@ -81,8 +81,11 @@ public class BasicBFSDFS {
 		}
 
 		/**
+		 * Print all the nodes after traversing them as BFS, starting from the specified
+		 * node in the parameter
 		 * 
-		 * */
+		 * @param T
+		 */
 		public void BFS(T node) {
 			if (!this.adjMatrix.containsKey(node))
 				return;
