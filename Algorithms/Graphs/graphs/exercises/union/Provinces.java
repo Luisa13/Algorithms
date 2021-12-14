@@ -20,6 +20,13 @@ import java.util.Stack;
  * 
  * Return the total number of provinces.
  * 
+ * APPROACH
+ * The approach here is pretty simple.
+ * There are different graphs and we don't know a priori how many of them are. So 
+ * we just iterate the graph (first, build it) and every time we arrive to a dead
+ * end, we take another node to start traversing. Obviously, tracking the visited 
+ * nodes to don't count them twice...
+ * 
  * @author luisa
  * 
  */
