@@ -1,4 +1,4 @@
-package graphs.exercises;
+package graphs.exercises.topological;
 
 import java.util.*;
 

@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import graphs.exercises.DependencyGraph1;
+import graphs.exercises.topological.DependencyGraph1;
 
 class DependencyGraph1_Test {
 
