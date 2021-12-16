@@ -9,7 +9,7 @@ import graphs.exercises.union.MostStonesRemoved;
 
 class MostStonesRemoved_Test {
 	
-	static final int[] RESPONSES = {5,3,0}; 
+	static final int[] RESPONSES = {5, 3, 0, 4}; 
 	
 	
 	@Test
@@ -31,6 +31,13 @@ class MostStonesRemoved_Test {
 		int[][] arr = {{0,1},{1,0}};
 		Integer num = MostStonesRemoved.removeStones(arr);
 		assertTrue(num.equals(RESPONSES[2]));
+	}
+	
+	@Test
+	void longGraph_Four() {
+		int[][] arr = {{0,1},{1,2},{1,3},{3,3},{2,3},{0,2}};
+		Integer num = MostStonesRemoved.removeStones(arr);
+		assertTrue(num.equals(RESPONSES[3]));
 	}
 
 }
