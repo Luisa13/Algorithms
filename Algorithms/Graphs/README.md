@@ -11,14 +11,14 @@ Performs operations in a disjoint sets in order to identify if problems talks ab
 - Number of operation to make a network connected.
 
 ### Depth First Search
-Use a stack for traverse it. DFS by itself doesn't guarantee the shortest path, only a path.
+Use a stack for traverse it. DFS by itself doesn't guarantee the shortest path, only a path. Therefore use DFS when you want to **exhaust** all possibilities, and check which one is the best/count the number of all possible ways.
 
-- Find connected components, so therefore island count type problems and island variants.
+- Find connected components (ideal for island count type problems and island variants).
 - Shortest time.
 - Finding Bridges of graph.
 
 ### Breadth First Search
-Use a queue for traverse it. BFS guarantees visiting all nodes at distance 1 before those at distance 2, etc.
+Use a queue for traverse it. BFS guarantees visiting all nodes at distance 1 before those at distance 2, etc, which means it gives an optimal solution. Therefore use BFS when you want to find the **shortest** path from a certain source node to a certain destination. (Or more generally, the smallest number of steps to reach the end state from a given initial state.)
 
 - Shortest path*.
 - Coloring graph.
