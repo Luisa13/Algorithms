@@ -14,10 +14,9 @@ However, normaly is not the best solution, as the algorithm runs exponentially i
 ## Dynamic Programming
 This is a technique to optimize a recursive approach by breaking it down into simpler subproblems. 
 Any problem has optimal substructure property if its overall optimal solution can be constructed from the optimal solutions of its subproblems.
-Dynamic Programming offers two main approaches to address the problem:
+[Here](https://leetcode.com/discuss/general-discussion/662866/Dynamic-Programming-for-Practice-Problems-Patterns-and-Sample-Solutions) is possible to find a little discussion about the main problems where this technique applies. Dynamic Programming offers two main approaches to address the problem:
 - Memoization (Top-down)
 - Tabulation (Bottom-up)
-
 
 
 [Dynamic Programming exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/RecursionAndDynamicP/exercises/dynamicProgramming)
