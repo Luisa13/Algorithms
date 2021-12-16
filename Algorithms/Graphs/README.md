@@ -1,16 +1,33 @@
 # Graphs
 Some topic covered:
 
-- Graph basics
-- DFS & BFS: Depth first and Breadth first traversal
-- Detect Cycle
-- Has path
-- Undirected path
-- Connected components count
-- Largest component
-- Shortest path
-- Island count
-- Minimum island
+### Graph Basics
+Main ways to traverse a graph: DFS and BFS.
+
+### Union Find
+Performs operations in a disjoint sets in order to identify if problems talks about finding groups or components.
+- Count the number of disjoint sets.
+- Find the reduntant connection.
+- Number of operation to make a network connected.
+
+### Depth First Search
+- Island count and island variants.
+- Shortest time.
+
+### Breadth First Search
+- Shortest path*.
+- Coloring graph.
+- Bipartition.
+
+### Detect Cycle
+- DFS approach.
+- Topological Sort approach
+- Floyd approach
+
+
+### Topological Sort
+Given a directed acylic graph, the topological sort is a linear ordering of vertices such that for every directed edge u v, vertex u comes before v in the ordering. Topological Sorting for a graph is not possible if the graph is not a DAG.
+
 
 
 
