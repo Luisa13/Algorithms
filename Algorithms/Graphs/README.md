@@ -11,10 +11,15 @@ Performs operations in a disjoint sets in order to identify if problems talks ab
 - Number of operation to make a network connected.
 
 ### Depth First Search
-- Island count and island variants.
+Use a stack for traverse it. DFS by itself doesn't guarantee the shortest path, only a path.
+
+- Find connected components, so therefore island count type problems and island variants.
 - Shortest time.
+- Finding Bridges of graph.
 
 ### Breadth First Search
+Use a queue for traverse it. BFS guarantees visiting all nodes at distance 1 before those at distance 2, etc.
+
 - Shortest path*.
 - Coloring graph.
 - Bipartition.
