@@ -1,4 +1,4 @@
-package medium.exercises;
+package moderate.exercises;
 
 import java.util.ArrayList;
 import java.util.Arrays;
