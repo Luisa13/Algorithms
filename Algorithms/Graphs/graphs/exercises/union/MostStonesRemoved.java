@@ -115,7 +115,7 @@ public class MostStonesRemoved {
             
             for(int value: graphCols.get(v)){
             	List<Integer> possible = new ArrayList<>();
-            	possible.add(value)
+            	possible.add(value);
             	possible.add(v);
                 System.out.println("\t " +  possible);
                 
