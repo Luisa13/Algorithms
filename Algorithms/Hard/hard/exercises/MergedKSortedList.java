@@ -31,12 +31,11 @@ public class MergedKSortedList {
 	}
 
 	/**
-	 * APPROACH 1 In this approach we use a priority queue to sort the elements
+	 * APPROACH 1 
+	 * In this approach we use a priority queue to sort the elements
 	 * which makes it O(n) in space while in time is O(n log n). 
-	 * Explanation: 
-	 * Insert an element in a priority queue is O(log n) and since we have to do it with
-	 * the whole array the results is O(n log n). Later We'll traverse this array to
-	 * store it in the list which is O(n)
+	 * There is a good discussion about this here: https://stackoverflow.com/questions/3759112/whats-faster-inserting-into-a-priority-queue-or-sorting-retrospectively/10761286
+	 * 
 	 */
 	public ListNode mergeKLists(ListNode[] lists) {
 		if (lists.length == 0)
