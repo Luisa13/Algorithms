@@ -10,7 +10,7 @@ Linked List           | Problems based on linked list structure.    |[exercises]
 Stacks and Queues     | Stacks and queues based solutions.             |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Stacks)
 Trees and Graphs      | Covers trees and graphs structures and the different ways to traverse them. |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Trees)
 Graphs II             | More exercises just focused on graphs and different strategies | [exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Graphs)
-Hash                  |              |[]()
+Hash & Heaps          |              |[]()
 OO Design             | Practicing around the desing of a system with object-oriented principles. |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/OODesign)
 Recursion & Dynamic Programming  | Solving recursion problems from different approaches.  |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/RecursionAndDynamicP)
 System Design         |              |[]()
