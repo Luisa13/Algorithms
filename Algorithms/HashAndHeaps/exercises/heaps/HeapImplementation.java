@@ -10,8 +10,10 @@ public class HeapImplementation {
 	public static class MaxHeap {
 		// DS where the elements are stored
 		private int[] heap;
+		
 		// Max capacity of the heap
 		private static int MAXCAPACITY;
+		
 		// Current size of the heap
 		private int size;
 
@@ -77,7 +79,7 @@ public class HeapImplementation {
 		}
 
 		/**
-		 * Returns the minimun element of the heap without removing it.
+		 * Returns the maximum element of the heap without removing it.
 		 * 
 		 * @return int
 		 */
