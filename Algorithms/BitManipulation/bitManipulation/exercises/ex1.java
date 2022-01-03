@@ -13,6 +13,7 @@ public class ex1 {
 		
 		// We have to clear the N number first creating a mask of 1s that have 0s from j to i.
 		// The mask we need, must have 0s in the gap [i, j]
+		
 		int left = ~0 << j; // if j = 6:  11110000000
 		int right  = ~(~0 << 2); // if i = 2: 00000000011
 		int mask = left | right; // That will leave us with 11110000011
