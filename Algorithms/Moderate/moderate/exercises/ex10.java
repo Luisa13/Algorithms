@@ -17,7 +17,7 @@ import java.util.Arrays;
  * living during that time frame) 
  * - Do we care about which birth year corresponds to which death year? (it 
  * seems important, but...actually not, what actually matters is if someone 
- * gets it or out of the imeline, but whether that person lives longer or not...pff)
+ * gets it or out of the timeline, but whether that person lives longer or not...pff)
  * 
  * @author luisa
  */
