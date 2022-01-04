@@ -14,9 +14,41 @@ However, normaly is not the best solution, as the algorithm runs exponentially i
 ## Dynamic Programming
 This is a technique to optimize a recursive approach by breaking it down into simpler subproblems. 
 Any problem has optimal substructure property if its overall optimal solution can be constructed from the optimal solutions of its subproblems.
-[Here](https://leetcode.com/discuss/general-discussion/662866/Dynamic-Programming-for-Practice-Problems-Patterns-and-Sample-Solutions) is possible to find a little discussion about the main problems where this technique applies. Dynamic Programming offers two main approaches to address the problem:
-- Memoization (Top-down)
-- Tabulation (Bottom-up)
+[Here](https://leetcode.com/discuss/general-discussion/662866/Dynamic-Programming-for-Practice-Problems-Patterns-and-Sample-Solutions) is possible to find a little discussion about the main problems where this technique applies alongside the [patterns](https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns). Dynamic Programming offers two main approaches to address the problem:
+
+Given a general problem statement
+> Get the minimum/ maximum cost to reach a target
+
+The approach is choose the min/max cost **among all the possible paths before the current state**, and then add the value for the current state.
+```
+route[i] = Min(route[i-1], route[i-2], ... route[i-n]) + cost[i]
+```
+
+</br>
+
+- **MEMOIZATION** (Top-down)
+```
+  for (int i = 0; i< ways.size(); ++i) {
+      result = Min(result, topDown(target - ways[i]) + cost);
+  }
+  return  result[i];
+```
+
+
+</br>
+
+- **TABULATION** (Bottom-up)
+```
+for (int i = 1; i <= target; ++i) {
+   for (int j = 0; j < ways.size(); ++j) {
+       if (ways[j] <= i) {
+           dp[i] = min(dp[i], dp[i - ways[j]] + cost) ;
+       }
+   }
+}
+ 
+return dp[target]
+```
 
 
 [Dynamic Programming exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/RecursionAndDynamicP/exercises/dynamicProgramming)
