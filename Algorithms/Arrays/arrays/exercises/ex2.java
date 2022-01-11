@@ -9,6 +9,7 @@ public class ex2 {
 	
 	/**
 	 * Given two strings, returns true if one is permutation of the other. False otherwise.
+	 * 
 	 * */
 	public static boolean isPermutation(String str1, String str2) {
 		

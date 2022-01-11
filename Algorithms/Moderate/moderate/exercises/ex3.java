@@ -25,7 +25,7 @@ package moderate.exercises;
 public class ex3 {
 
 	/**
-	 * Represents a poitn with its respective coordenates x, y
+	 * Represents a point with its respective coordinates x, y
 	 * 
 	 * */
 	public static class Point{
