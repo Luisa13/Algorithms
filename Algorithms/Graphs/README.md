@@ -13,12 +13,59 @@ Use a stack for traverse it. DFS by itself doesn't guarantee the shortest path, 
 - Shortest time.
 - Finding Bridges of graph.
 
+```
+public void DFS(T node){
+  
+    Stack<T> stack = new Stack<>();
+    stack.push(node);
+
+    while(!stack.isEmpty()){
+    
+        T current = stack.pop();
+        if(!visited.contains(current)){
+              process(node);
+              visited.add(node);
+              
+              if(adjacentMatrix.contains(current)){
+                    List<T> children = adjacentMatrix.getChildren();
+                    for(child: children)
+                      stack.push(child);
+              }
+        }
+    }
+    
+    return;
+}
+```
+
 ### Breadth First Search
 Use a queue for traverse it. BFS guarantees visiting all nodes at distance 1 before those at distance 2, etc, which means it gives an optimal solution. Therefore use BFS when you want to find the **shortest** path from a certain source node to a certain destination. (Or more generally, the smallest number of steps to reach the end state from a given initial state.)
 
 - Shortest path*.
 - Coloring graph.
 - Bipartition.
+
+```
+public void BFS(T node){
+    Queue<T> queue = new LinkedList<>();
+    
+    while(!queue.isEmpty()){
+        T current = queue.poll();
+        if(!visited.contains(current)){
+              process(node);
+              visited.add(node);
+              
+              if(adjacentMatrix.contains(current)){
+                    List<T> children = adjacentMatrix.getChildren();
+                    for(child: children)
+                      stack.push(child);
+              }
+        }
+    }
+    
+    return;
+}
+```
 
 ## Common strategies
 
