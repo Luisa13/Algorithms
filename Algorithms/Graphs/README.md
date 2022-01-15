@@ -4,11 +4,7 @@ Some topic covered:
 ### Graph Basics
 Main ways to traverse a graph: DFS and BFS.
 
-### Union Find
-Performs operations in a disjoint sets in order to identify if problems talks about finding groups or components.
-- Count the number of disjoint sets.
-- Find the reduntant connection.
-- Number of operation to make a network connected.
+## Main Algorithms
 
 ### Depth First Search
 Use a stack for traverse it. DFS by itself doesn't guarantee the shortest path, only a path. Therefore use DFS when you want to **exhaust** all possibilities, and check which one is the best/count the number of all possible ways.
@@ -23,6 +19,15 @@ Use a queue for traverse it. BFS guarantees visiting all nodes at distance 1 bef
 - Shortest path*.
 - Coloring graph.
 - Bipartition.
+
+## Common strategies
+
+### Union Find
+Performs operations in a disjoint sets in order to identify if problems talks about finding groups or components.
+- Count the number of disjoint sets.
+- Find the reduntant connection.
+- Number of operation to make a network connected.
+
 
 ### Detect Cycle
 - DFS approach.
