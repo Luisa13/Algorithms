@@ -1,12 +1,28 @@
 package moderate.exercises;
 
 /**
- * Operations Write a method to implement the multiply, subtract, and divide
+ * Operations.
+ * 
+ * Write a method to implement the multiply, subtract, and divide
  * operations for integers. The result of all of these are integers. Use only
  * the add operator.
  * 
- * APPROACH: We are going to first off with the subtract method since it's the
+ * APPROACH: 
+ * We are going to first off with the subtract method since it's the
  * simplest one, and can be addressed with bitwise operations.
+ * 
+ * We will continue with multiplication, where we will just need to sum up the
+ * max number as many times as the min number said (for optimal reasons, we just 
+ * want to loop as less times as possible). We should cover if any of the numbers 
+ * are 0, and giving the fact we are actually adding, if they're negatives.
+ * 
+ * And finally, we implemented division, using the above method, multiplication.
+ * The key point here is to think we don't need to give an exact result as we have 
+ * to return an integer. So what we are going to do, is to go through the range 
+ * from 1 to a, and iteatively multiply* b by the iteator. 
+ * As we do that, calculate the distance between that result and the target (a) which
+ * should be less and less. When it stops improving (when the previous distance is less
+ * than the one we just get), return the previous position (i-1)
  * 
  * 
  * @author luisa
