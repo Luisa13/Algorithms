@@ -49,6 +49,11 @@ public class ex19 {
 	
 	private final static Set<Cell> visited = new HashSet<>();
 	
+	/**
+	 * Represents the cell into a board which is defined by its
+	 * coordinates x, y.
+	 * 
+	 * */
 	public static class Cell{
 		private final static int BOARD_ROW_MAX = 4;
 		private final static int BOARD_COL_MAX = 4;
