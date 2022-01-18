@@ -20,7 +20,7 @@ General C++           |              |[]()
 General Java          | Some exercises to practice Java core concepts. |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/JavaCore)
 DataBase              |              |[]()
 Threads               | Basics about concurrency and [exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Threads/MultiThreading) from the course Multithreading from Udemy.  |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Threads)
-Moderate              |              |[]()
+Moderate              |  A bit harder than usual   |[exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/Moderate/moderate/exercises)
 Hard                  |              |[]()
 
 
