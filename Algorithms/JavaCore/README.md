@@ -48,7 +48,3 @@ OTHER REFERENCES
 - [Clean Code in Java](https://github.com/leonardolemie/clean-code-java)
 - [The Java interview repo](https://github.com/DopplerHQ/awesome-interview-questions#java)
 - [Senior Java interview](https://medium.com/@riteshgoel_/java-interview-questions-48777ef58b3b)
-- [100 Java interview questions](https://www.edureka.co/blog/interview-questions/java-interview-questions/)
-- [Java Core concepts](https://www.journaldev.com/2366/core-java-interview-questions-and-answers)
-- [Java Google code style](https://google.github.io/styleguide/javaguide.html)
-- [Topics for a Java Interview](https://javarevisited.blogspot.com/2017/01/how-to-prepare-for-java-interviews.html)
