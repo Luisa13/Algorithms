@@ -44,6 +44,7 @@ The topics covered in this part are listed below but may serves as a reference [
 
 
 OTHER REFERENCES
+- [Java repo for inteviews](https://github.com/learning-zone/java-interview-questions)
 - [Java concept tutorials](https://javaconceptoftheday.com)
 - [Clean Code in Java](https://github.com/leonardolemie/clean-code-java)
 - [The Java interview repo](https://github.com/DopplerHQ/awesome-interview-questions#java)
