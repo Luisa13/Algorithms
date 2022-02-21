@@ -20,7 +20,7 @@ public class ex7 {
 		return m;
 	}
 	
-	//TODO: change parameters origin and destiny as PAIR (can be found in JavaFX library)
+	//TODO: change parameters origin and destiny as PAIR
 	static int[][] swapValue(int m[][], int originX, int originY, int destX, int destY ){
 		int aux = m[destX][destY];
 		m[destX][destY] = m[originX][originY];
