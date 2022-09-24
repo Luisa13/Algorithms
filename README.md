@@ -38,6 +38,7 @@ REFERENCES & RESOURCES
 - [System Design Course](https://www.educative.io/courses/grokking-the-system-design-interview)
 - [System Design Basics](https://github.com/donnemartin/system-design-primer)
 - [Git Scalability](https://github.com/binhnguyennus/awesome-scalability)
+- [Patterns in LetCode problems](https://iorilan.medium.com/after-solved-1000-medium-leetcode-found-these-patterns-sliding-window-2-pointer-string-18332ca4861)
 
 **Just Coding**
 * [Just, the best repo for coding inteviews prep](https://github.com/kdn251/interviews)
