@@ -52,3 +52,8 @@ return dp[target]
 
 
 [Dynamic Programming exercises](https://github.com/Luisa13/Algorithms/tree/main/Algorithms/RecursionAndDynamicP/exercises/dynamicProgramming)
+
+
+OTHER RESOURCES
+-[Backtracking pattern](https://medium.com/leetcode-patterns/leetcode-pattern-3-backtracking-5d9e5a03dc26)
+- [Backtracking patterns. A leetcode discussion](https://leetcode.com/problems/permutations/discuss/18239/a-general-approach-to-backtracking-questions-in-java-subsets-permutations-combination-sum-palindrome-partioning)
