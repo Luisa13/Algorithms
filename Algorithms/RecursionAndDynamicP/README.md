@@ -59,3 +59,4 @@ OTHER RESOURCES
 - [Backtracking pattern](https://medium.com/leetcode-patterns/leetcode-pattern-3-backtracking-5d9e5a03dc26)
 - [Backtracking patterns in most popular problems. A leetcode discussion](https://leetcode.com/problems/permutations/discuss/18239/a-general-approach-to-backtracking-questions-in-java-subsets-permutations-combination-sum-palindrome-partioning)
 - [Backtracking explanation](https://www.programiz.com/dsa/backtracking-algorithm)
+- [Gas station. A discussion](https://leetcode.com/problems/gas-station/discuss/1705957/Java-A-very-detailed-explanation-or-Intuition-behind-logic-or-Brute-Force-to-Optimised)
