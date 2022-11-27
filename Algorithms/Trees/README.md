@@ -12,3 +12,4 @@ _REFERENCES:_
 
 
 * [Main graphs algo](https://towardsdatascience.com/10-graph-algorithms-visually-explained-e57faa1336f3)
+* [Trie DS](https://medium.com/@itachisasuke/implementing-a-search-engine-in-golang-trie-data-structure-c45152ddda24)
