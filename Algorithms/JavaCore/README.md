@@ -49,3 +49,4 @@ OTHER REFERENCES
 - [Clean Code in Java](https://github.com/leonardolemie/clean-code-java)
 - [The Java interview repo](https://github.com/DopplerHQ/awesome-interview-questions#java)
 - [Senior Java interview](https://medium.com/@riteshgoel_/java-interview-questions-48777ef58b3b)
+- [Memory management](https://fethi3460.medium.com/java-application-performance-and-memory-management-413fdc82618b)
